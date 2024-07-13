@@ -1,7 +1,5 @@
 $(function () {
-  // $("#section1").show().parent().siblings().find("section").hide();
   $(".open-overlay").click(function () {
-    // $(".open-overlay").css("pointer-events", "none");
     let overlay_navigation = $(".overlay-navigation"),
       top_bar = $(".bar-top"),
       middle_bar = $(".bar-middle"),
@@ -35,7 +33,7 @@ $(function () {
                 },
                 {
                   delay: 10,
-                  duration: 140,
+                  duration: 100,
                 }
               );
               $(".open-overlay").css("pointer-events", "auto");
@@ -61,20 +59,17 @@ $(function () {
             .removeClass("overlay-slide-down")
             .addClass("overlay-slide-up");
           overlay_navigation.removeClass("overlay-active");
-          let index = $(this).index() + 1; 
-          $("#section" + index)
-            .show()
-            .parent()
-            .siblings()
-            .find("section")
-            .hide();
+
+          let pages = ["index.html", "hanbok.html", "grim.html", "sori.html", "hansik.html"];
+          let index = $(this).index();
+
           $("nav ul li").velocity("transition.perspectiveRightOut", {
             stagger: 150,
             delay: 0,
             complete: function () {
               overlay_navigation.velocity("transition.fadeOut", {
                 delay: 0,
-                duration: 300,
+                duration: 100,
                 complete: function () {
                   $("nav ul li a").velocity(
                     {
@@ -82,12 +77,15 @@ $(function () {
                     },
                     {
                       delay: 0,
-                      duration: 50,
+                      duration: 0,
                     }
                   );
                   // Show the corresponding section
 
                   $(".open-overlay").css("pointer-events", "auto");
+
+                  // 페이지 이동
+                  window.location.href = pages[index];
                 },
               });
             },
@@ -112,7 +110,7 @@ $(function () {
         complete: function () {
           overlay_navigation.velocity("transition.fadeOut", {
             delay: 0,
-            duration: 300,
+            duration: 100,
             complete: function () {
               $("nav ul li a").velocity(
                 {
@@ -130,5 +128,4 @@ $(function () {
       });
     }
   }); /* click */
-
 }); /* ready */
