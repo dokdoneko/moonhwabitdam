@@ -60,8 +60,8 @@ $(function () {
             .addClass("overlay-slide-up");
           overlay_navigation.removeClass("overlay-active");
 
-          let pages = ["index.html", "hanbok.html", "grim.html", "sori.html", "hansik.html"];
-          let index = $(this).index();
+          // let pages = ["index.html", "hanbok.html", "grim.html", "sori.html", "hansik.html"];
+          // let index = $(this).index();
 
           $("nav ul li").velocity("transition.perspectiveRightOut", {
             stagger: 150,
