@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@font-face {
+  font-family: 'GapyeongHanseokbong';
+  src:url('../font/gapyeongHanseokbong/gapyeongHanseokbongB.woff') format('woff'),
+      url('../font/gapyeongHanseokbong/gapyeongHanseokbongB.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GapyeongHanseokbong';
+  src:url('../font/gapyeongHanseokbong/gapyeongHanseokbongR.woff') format('woff'),
+      url('../font/gapyeongHanseokbong/gapyeongHanseokbongR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GapyeongHanseokbong';
+  src:url('../font/gapyeongHanseokbong/gapyeongHanseokbongL.woff') format('woff'),
+      url('../font/gapyeongHanseokbong/gapyeongHanseokbongL.ttf') format('truetype');
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GapyeongWave';
+  src:url('../font/gapyeongHanseokbong/gapyeongWave.woff') format('woff'),
+      url('../font/gapyeongHanseokbong/gapyeongWave.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'solmoeKimDaeGeon';
+  src:url('../font/solmoeKimDaeGeon/solmoeKimDaeGeonMedium.woff') format('woff'),
+      url('../font/solmoeKimDaeGeon/solmoeKimDaeGeonMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'solmoeKimDaeGeon';
+  src:url('../font/solmoeKimDaeGeon/solmoeKimDaeGeonLight.woff') format('woff'),
+      url('../font/solmoeKimDaeGeon/solmoeKimDaeGeonLight.ttf') format('truetype');
+  font-weight: light;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  overflow-x: hidden;
+  font-family: "GapyeongHanseokbong", "Noto Sans KR", sans-serif;
+}
+:root {
+  --basic-color-white: #fff;
+  --basic-color-dark: #333;
+  --main-color-0: #735845;
+  --main-color-1: #948976;
+  --main-color-2: #676870;
+  --main-color-3: #92b4ab;
+  --main-color-4: #7F879B;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5 {
+  font-family: 'solmoeKimDaeGeon', sans-serif;
+  font-weight: normal; /* Adjust weights as needed */
+  /* color: var(--main-color-1); */
+}
+h1 {
+  font-size: 3rem; /* Adjust sizes as needed */
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+body {
+  font-family: "GapyeongHanseokbong", "Noto Sans KR", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--basic-color-dark);
+}
+
+p {
+  font-family: "GapyeongHanseokbong", "Noto Sans KR", sans-serif;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+/* --------레이아웃 시작-------- */
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* ====================================
+Navigation 
+==================================== */
+
+.overlay-navigation {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  display: none;
+  opacity: 0;
+}
+
+nav,
+nav ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  -webkit-flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  display: none;
+  background-size: auto, auto;
+  background-position: center center, right bottom;
+  /* animation: moveBackground 10s infinite linear; */
+}
+
+nav li a {
+  position: relative;
+  top: 40%;
+  color: rgba(255,255,255,.8);
+  text-transform: uppercase;
+  font-family: "solmoeKimDaeGeon", "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  vertical-align: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0;
+  writing-mode: vertical-rl;
+}
+
+nav li a:before {
+  content: '';
+  width: 70px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+nav li a:after {
+  content: attr(data-content);
+  font-size: 0.8rem;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  display: block;
+  line-height: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  text-transform: none;
+  font-family: 'Open sans', sans-serif;
+  transform: rotate(180deg);
+  width: 70px;
+  height: 100%;
+  text-align: right;
+}
+nav li:nth-of-type(1) a:after{
+  line-height: normal;
+  padding-right: 6px;
+}
+nav li a:hover:before {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+nav li a:hover:after {
+  -webkit-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  transform: translateY(15px) rotate(180deg);
+  opacity: 1;
+}
+
+nav li:nth-of-type(1) {
+  background-color: var(--main-color-0);
+}
+nav li:nth-of-type(2) {
+  background-color: var(--main-color-1);
+}
+nav li:nth-of-type(3) {
+  background-color: var(--main-color-2);
+  overflow: hidden;
+}
+nav li:nth-of-type(3)::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7%;
+  height: 7%; 
+  background: url('../images/pattern_painting.svg') center;
+  background-size: 100% 100%; /* 배경 크기를 100%로 설정하여 반복하지 않음 */
+  z-index: 1; 
+  opacity: 0.9; 
+}
+
+nav li:nth-of-type(4) {
+  background-color: var(--main-color-3);
+}
+nav li:nth-of-type(4)::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 60%;
+  width: 20%;
+  height: 60px; 
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80"%3E%3Cpath fill="none" stroke="%23FFFFFF" stroke-width="2" d="M0,40 Q20,20 40,40 Q60,60 80,40 Q100,20 120,40"%3E%3C/path%3E%3C/svg%3E') repeat center; /* SVG pattern */
+  background-size: auto 18px;
+  z-index: 1; 
+  opacity: 0.9; 
+}
+nav li:nth-of-type(5) {
+  background-color: var(--main-color-4);
+}
+
+
+/* ====================================
+Burger king
+==================================== */
+
+.open-overlay {
+  position: fixed;
+  right: 5rem;
+  top: 3.2rem;
+  z-index: 100;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.6rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.open-overlay span {
+  height: 1px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.animate-top-bar {
+  -webkit-animation: animate-top-bar .6s linear 1 both;
+  animation: animate-top-bar .6s linear 1 both
+}
+
+.animate-bottom-bar {
+  -webkit-animation: animate-bottom-bar .6s linear 1 both;
+  animation: animate-bottom-bar .6s linear 1 both
+}
+
+.animate-middle-bar {
+  -webkit-animation: animate-middle-bar .6s linear 1 both;
+  animation: animate-middle-bar .6s linear 1 both
+}
+
+.animate-out-top-bar {
+  -webkit-animation: animate-out-top-bar .6s linear 1 both;
+  animation: animate-out-top-bar .6s linear 1 both
+}
+
+.animate-out-bottom-bar {
+  -webkit-animation: animate-out-bottom-bar .6s linear 1 both;
+  animation: animate-out-bottom-bar .6s linear 1 both
+}
+
+.animate-out-middle-bar {
+  -webkit-animation: animate-out-middle-bar .6s linear 1 both;
+  animation: animate-out-middle-bar .6s linear 1 both
+}
+
+.section_wrap{}
+.section_wrap li{}
+.section_wrap li:nth-child(3) section{
+  height: 300vh;
+}
+
+
+/* ====================================
+Animation keyframes
+==================================== */
+
+@keyframes animate-top-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px)
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #fff
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #fff;
+  }
+}
+
+@keyframes animate-bottom-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px)
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #fff;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #fff;
+  }
+}
+
+@keyframes animate-middle-bar {
+  0% {
+    background-color: #fff;
+  }
+  80% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes animate-out-top-bar {
+  0% {
+    background-color: #29363B
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px)
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #29363B
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@keyframes animate-out-bottom-bar {
+  0% {
+    background-color: #29363B
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px)
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #29363B;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@keyframes animate-out-middle-bar {
+  0% {
+    background-color: #29363B
+  }
+  80% {
+    background-color: #29363B;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+
+/* 반응형 */
+@media (max-width: 640px) {
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  nav ul li {
+    height: 20%;
+  }
+  nav li:nth-of-type(2) {
+    background-image: url(../images/test02.png);
+    background-image: none;
+  }  
+  nav li:nth-of-type(4) {
+    background-image: url(../images/test02.png);
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  nav li a:after {
+    font-size: 0.8rem;
+    bottom: -25px;
+  }
+  nav li a:hover:after {
+    transform: translateY(0);
+  }
+  .open-overlay {
+    right: 1rem;
+  }
+  nav li a:before {
+    width: 25px;
+  }
+}
