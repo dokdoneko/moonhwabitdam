@@ -1,28 +1,75 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  #grim{
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-
+.section{
+    width: 100%; height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
 }
-#grim .main_visual{
+.main_visual{
     background-image: url(../images/grim/grim_banner.png);
     position: relative;
+    width: 100%;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#grim .tiger{
+.title_wrap {
+    width: 555px;
+    height: 555px;
+    position: relative;
+    background-image: url(../images/sori/hero_door3.png);
+    background-image: url(../images/grim/main_circle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 426px;
+  }
+  .outer_line{
+    width: 195px;
+    height: 427px;
+    border: 2px solid #AD9F95;
+    background: rgba(255, 255, 255, 0.80);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    /* 변경구간 */
+    border: none;
+    background: transparent;
+  }
+  .inner_line{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #AD9F95;
+    font-family: "Solmoe KimDaeGeon";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 1.5rem;
+    /* 변경구간 */
+    border: none;
+    background: transparent;    
+  }
+  .inner_line em{
+    font-size: 25px;
+    font-style: normal;
+  }
+.tiger{
     position: absolute;
     left: 40px;
     bottom: 0;
     mix-blend-mode:luminosity;
 }
-#grim .circle{
+.circle{
     position: absolute;
     top: 30%;
     left: 50%;
@@ -30,83 +77,142 @@
     opacity: 0.8;
 }
 .contents1{
-    width: 100%;
-    height: 100%;
-    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    /* background-color: black; */
+    background-image: url(../images/grim/grim_pocpo.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 77px center;
 }
 .contents1 p{
     font-size: 22px;
-    font-family: 'Gapyeong Hanseokbong';
     text-align: left;
-}
-.contents1 .dojang{
-
-}
-.contents1 .pocpo{
-
+    line-height: 300%;
+    transform: translateX(80px);
 }
 .contents2{
     background-image: url(../images/grim/grim_love.png);
-    font-family: 'Gapyeong Hanseokbong';
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .contents2 .text1,
 .contents2 .text2{
     width: 555px;
     height: 250px;
+    transform: translateX(250px);
 }
 .contents2 h2{
     font-size: 30px;
 }
 .contents2 p{
-    line-height: 50px;
+    line-height: 50px;        
     font-size: 15px;
+    position: relative;
 }
-.contents2 .dojang2{
+.dojang2{
+    width: 22px;
+    height: 22px;
+}
+
+
+.contents3{}
+h2.sub{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 500;
+    font-family: "GapyeongHanseokbong", "Noto Sans KR", sans-serif;
+    padding: 104px 0 124px;
+}
+.card_wrap{
+    padding: 0 8rem;
+    width: 100%;
+    height: calc(100vh - 320px);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+.card{
+    width: 32%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 
 }
-.contents3{
-    width: 100%;
-    height: 100%;
-}
 .contents3 .grim1{
-    background-image: url(../images/grim/grim1);
+    background-image: url(../images/grim/grim1.png);
 }
 .contents3 .grim2{
-    background-image: url(../images/grim/grim2);
+    background-image: url(../images/grim/grim2.png);
 }
 .contents3 .grim3{
-    background-image: url(../images/grim/grim3);
+    background-image: url(../images/grim/grim3.png);
 }
-.contents3 .text{
-    display: none;
-    font-family: 'Gapyeong Hanseokbong';
-width: 356px;
-height: 260px;}
-.contents3 .text p{font-size: 15px;
-line-height: 50px;}
-.contents3 .back1{
-    background-color: #F9F6F1;
-    opacity: .8;
-}
-.contents3 .back2{
-    background-color: #F2E8EA;
-    opacity: .8;
-}
-.contents3 .back1,.contents3 .back2,.contents3 .back3{
-    display: none;
-}
-.contents3 .text h2{font-size: 25px;}
-.contents3 .grim1:hover .text1{display: block;}
-.contents3 .grim2:hover .text2{display: block;}
-.contents3 .grim3:hover .text3{display: block;}
-.contents3 .grim1:hover .back1{display: block;}
-.contents3 .grim2:hover .back2{display: block;}
-.contents3 .grim3:hover .back3{display: block;}
- 
-/* contents4 */
-.contents4{
+.card .text{
+    position: absolute;
+    left: 0;
+    top: 24%;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10% 10%;
+    z-index: 10;
+    font-family: 'Gapyeong Hanseokbong';
+    opacity: 0;
+    transition: .5s;
+    /* width: 356px;
+    height: 260px; */
+}
+.card .text p{
+    font-size: 15px;
+    /* line-height: 50px; */
+}
+.card:hover .text{
+    opacity: 1;
+}
+.card::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;    
+    transition: .5s;
+    mix-blend-mode:screen;
+}
+.card.grim1::after{
+    background-color: var(--main-color-0);
+}
+.card.grim2::after{
+    background-color: var(--main-color-1);
+}
+.card.grim3::after{
+    background-color: var(--main-color-4);
+}
+.card:hover::after{
+    opacity: 1;
+}
+.section.content_temp{
+    height: auto;
+}
+
+
+/* contents4 */
+.contents4{
     font-family: 'Gapyeong Hanseokbong';
 }
 .contents4 h2{
