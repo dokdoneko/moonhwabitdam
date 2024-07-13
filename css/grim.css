@@ -123,7 +123,7 @@
 .contents3{}
 h2.sub{
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 500;
     font-family: "GapyeongHanseokbong", "Noto Sans KR", sans-serif;
     padding: 104px 0 124px;
@@ -145,7 +145,6 @@ h2.sub{
     cursor: pointer;
     position: relative;
     overflow: hidden;
-
 }
 .contents3 .grim1{
     background-image: url(../images/grim/grim1.png);
@@ -171,11 +170,13 @@ h2.sub{
     font-family: 'Gapyeong Hanseokbong';
     opacity: 0;
     transition: .5s;
+    text-shadow: 1px 1px 10px #fff;
     /* width: 356px;
     height: 260px; */
 }
 .card .text p{
-    font-size: 15px;
+    padding-top: 15px;
+    font-size: 18px;
     /* line-height: 50px; */
 }
 .card:hover .text{
@@ -208,12 +209,14 @@ h2.sub{
 }
 .section.content_temp{
     height: auto;
+    border-bottom: 1px solid #ccc;
 }
 
 
 /* contents4 */
 .contents4{
     font-family: 'Gapyeong Hanseokbong';
+    height: calc(100vh + 100px);
 }
 .contents4 h2{
     font-size: 60px;
@@ -222,8 +225,148 @@ h2.sub{
     font-size: 25px;
     line-height: 60px;
 }
+ul.slide{
+    width: 500%; height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+}
+ul.slide>li{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+ul.slide>li:nth-child(1){
+    background-image: url(../images/grim/sn_back.png);
+}
+ul.slide>li>ul.book{
+    position: absolute;
+    left: 8rem;
+    top:2rem;
+    display: flex;
+    gap: 20px;
+}
+ul.slide>li>ul.book>li{
+    width: 92px;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 63px 12px 24px;
+    background: #D7DDE3;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    font-family: "Solmoe KimDaeGeon";
+    font-size: 26px;
+    writing-mode: vertical-lr;
+    position: relative;
+    transition: .5s;
+}
+ul.slide>li>ul.book>li:before{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    top: -2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    transition: .5s;
+}
+ul.slide>li>ul.book>li:hover{
+    transform: translateY(4rem);
+}
+ul.slide>li>ul.book>li:hover:before{
+    height: 6rem;
+    top: -6rem;
+}
+ul.slide>li>ul.painting{
+    position: absolute;
+    right: 16rem;
+    top: 177px;
+    width:500px;
+    height: 800px;
+
+}
+ul.slide>li>ul.painting>li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    transition: .5s;
+}
+ul.slide>li>ul.painting>li:before{
+    content: '';
+    width: 615px;
+    height: 613px;
+    position: absolute;
+    left: -57px;
+    top: -178px;
+    background-image: url(../images/grim/painting_before01.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li>ul.painting>li:after{
+    content: '';
+    width: 615px;
+    height: 43px;
+    position: absolute;
+    left: -57px;
+    bottom: 0;
+    background-image: url(../images/grim/painting_after01.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li>ul.painting>li:nth-child(1){
+    background-image: url(../images/grim/painting0101.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li>ul.painting>li:nth-child(2){
+    background-image: url(../images/grim/painting0102.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li>ul.painting:hover>li{
+    height: 100%;
+}
+.book_contents{
+    width: 100%;
+    height: 60vh;
+    margin-top: 20rem;
+    padding: 0 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.book_contents div{
+    width: 50%;
+    height: 100%;
+}
+.text_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text_wrap p{
+    word-wrap: break-word;
+}
+.img_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.img_wrap h2{
+    writing-mode: vertical-lr;
+}
+
+
+
+
+
 /* sn */
-.contents4 .sn{
+/* .contents4 .sn{
     background-image: url(../images/grim/sn_back.png);
 }
 .contents4 .sn h2{
@@ -242,9 +385,10 @@ h2.sub{
     height: 304px;
 }
 .contents4 .sn .book .book1{}
-.contents4 .sn .book .book2{}
+.contents4 .sn .book .book2{} */
+
 /* cs */
-.contents4 .cs{
+/* .contents4 .cs{
     background-image: url(../images/grim/cs_back.png);
 }
 .contents4 .cs h2{
@@ -263,9 +407,10 @@ h2.sub{
     height: 342px;
 } 
 .contents4 .cs .book .book3{}
-.contents4 .cs .book .book4{}
+.contents4 .cs .book .book4{} */
+
 /* jws */
-.contents4 .jws{
+/* .contents4 .jws{
     background-image: url(../images/grim/jws_back.png);
 }
 .contents4 .jws h2{
@@ -284,9 +429,10 @@ h2.sub{
     height: 333px;
 } 
 .contents4 .jws .book .book5{}
-.contents4 .jws .book .book6{} 
+.contents4 .jws .book .book6{}  */
+
 /* gwj */
-.contents4 .gwj{
+/* .contents4 .gwj{
     background-image: url(../images/grim/gwj_back.png);
 }
 .contents4 .gwj h2{
@@ -305,9 +451,10 @@ h2.sub{
     height: 304px;
 } 
 .contents4 .gwj .book .book7{}
-.contents4 .gwj .book .book8{}  
+.contents4 .gwj .book .book8{}   */
+
 /*hr*/
-.contents4 .hr{
+/* .contents4 .hr{
     background-image: url(../images/grim/hr_back.png);
 }
 .contents4 .hr h2{
@@ -326,7 +473,10 @@ h2.sub{
     height: 304px;
 } 
 .contents4 .hr .book .book9{}
-.contents4 .hr .book .book10{}  
+.contents4 .hr .book .book10{}  */
+
+
+
 /* contents5 */
 .contents5{
     background-image: url(../images/grim/grim_5.png);
