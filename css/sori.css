@@ -70,7 +70,25 @@ body {
   align-items: center;
   gap: 40px;
   padding: 2rem 0;
+  position: relative;
 }
+.subheading::after{
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.50);
+  z-index: -1;
+  transition: .6s;
+}
+.subheading.on::after{
+  width: 100%;
+}
+/* .subheading.on{
+  background: var(--linear_fff_left, linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.50) 100%));
+} */
 .sub_wrap {
   height: 327px;
   display: flex;
@@ -96,7 +114,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   align-items: flex-end;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .sub_wrap_r .left_image {
   width: 380px;
@@ -112,39 +130,36 @@ body {
   height: 80%;
   z-index: 1;
 }
-.sul .left_image {
-}
+.sul .left_image {}
 .sul .left_image .illust {
   margin-right: -40px;
   width: 266px;
   height: 264px;
   background-image: url(../images/sori/sul_illust.png);
 }
-.chu .left_image {
-}
+.chu .left_image {}
 .chu .left_image .illust {
-  width: 261px;
-  height: 182px;
+  margin-right: -7px;
+  width: 213px;
+  height: 310px;
+  background-repeat: no-repeat;
   background-image: url(../images/sori/chu_illust.svg);
 }
-.coro .left_image {
-}
+.coro .left_image {}
 .coro .left_image .illust {
-  margin-right: -8px;
+  margin-right: -7px;
   width: 213px;
   height: 310px;
   background-image: url(../images/sori/coro_illust.svg);
 }
-.rain .left_image {
-}
+.rain .left_image {}
 .rain .left_image .illust {
   margin-right: -10px;
   width: 180px;
   height: 283px;
   background-image: url(../images/sori/rain_illust.svg);
 }
-.wedding .left_image {
-}
+.wedding .left_image {}
 .wedding .left_image .illust {
   margin-bottom: 40px;
   margin-right: -10px;
@@ -200,6 +215,65 @@ body {
 }
 .right_contents h2 {
   margin-top: 1.2rem;
+}
+
+footer{
+  height: 100vh;
+  position: relative;
+  background-color: var(--main-color-3);
+  background-image: url(../images/main/footer_deco.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-blend-mode: overlay; 
+}
+footer .f_deco{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+}
+footer .f_deco img{
+  width: 100%;
+  object-fit: cover;
+}
+footer .f_txt{
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .f_txt h4::before{
+  content: '';
+  width: 140px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: -60px;
+}
+footer .f_txt h4{
+  font-family: "GapyeongHanseokbong";
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-bottom: 100px;
+  position: relative;
+  padding-top: 60px;
+}
+footer .f_txt .family{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+footer .f_txt .family a{
+  padding: 20px 40px;
+  border: 1px solid #000;
+  margin-right: 20px;
+  transition: .6s;
+}
+footer .f_txt .family a:hover{
+  background: rgba(255, 255, 255, 0.50);
+}
+footer .f_txt .family a:last-child{
+  margin-right: 0;
 }
 
 /********* carousel start ********/
