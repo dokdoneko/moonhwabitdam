@@ -19,11 +19,12 @@
     height: 555px;
     position: relative;
     background-image: url(../images/sori/hero_door3.png);
-    background-image: url(../images/grim/main_circle.svg);
+    /* background-image: url(../images/grim/main_circle.svg); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     width: 426px;
+    transform: translateX(-100%);
   }
   .outer_line{
     width: 195px;
@@ -68,6 +69,7 @@
     left: 40px;
     bottom: 0;
     mix-blend-mode:luminosity;
+    display: none;
 }
 .circle{
     position: absolute;
@@ -226,7 +228,7 @@ h2.sub{
     line-height: 60px;
 }
 ul.slide{
-    width: 500%; height: 100%;
+    width: 100%; height: 100%;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -236,11 +238,31 @@ ul.slide{
 ul.slide>li{
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
     cursor: pointer;
+    opacity: 0;
+    pointer-events:none;
+}
+ul.slide>li.on{
+    opacity: 1;
+    pointer-events: all;
 }
 ul.slide>li:nth-child(1){
     background-image: url(../images/grim/sn_back.png);
+}
+ul.slide>li:nth-child(2){
+    background-image: url(../images/grim/cs_back.png);
+}
+ul.slide>li:nth-child(3){
+    background-image: url(../images/grim/jws_back.png);
+}
+ul.slide>li:nth-child(4){
+    background-image: url(../images/grim/gwj_back.png);
+}
+ul.slide>li:nth-child(5){
+    background-image: url(../images/grim/hr_back.png);
 }
 ul.slide>li>ul.book{
     position: absolute;
@@ -256,16 +278,46 @@ ul.slide>li>ul.book>li{
     justify-content: center;
     align-items: center;
     padding: 63px 12px 24px;
-    background: #D7DDE3;
-    background-image: url(../images/grim/book_rec.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto;
     font-family: "Solmoe KimDaeGeon";
     font-size: 26px;
     writing-mode: vertical-lr;
     position: relative;
     transition: .5s;
+    /* background: #D7DDE3;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto; */
+}
+ul.slide>li.sn>ul.book>li{
+    background: #D7DDE3;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+ul.slide>li.cs>ul.book>li{
+    background: #BFD9DC;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+ul.slide>li.jws>ul.book>li{
+    background: #D0D3D5;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+ul.slide>li.gwj>ul.book>li{
+    background: #E4DED7;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+ul.slide>li.hr>ul.book>li{
+    background: #B2BAB6;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 ul.slide>li>ul.book>li:before{
     content: '';
@@ -281,7 +333,54 @@ ul.slide>li>ul.book>li:before{
 ul.slide>li>ul.book>li:hover{
     transform: translateY(4rem);
 }
+ul.slide>li>ul.book>li.active{
+    transform: translateY(4rem);
+    /* background: #8B9CAD;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto; */
+}
+ul.slide>li.sn>ul.book>li.active{
+    background: #8B9CAD;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+}
+ul.slide>li.cs>ul.book>li.active{
+    background: #729EA3;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+}
+ul.slide>li.jws>ul.book>li.active{
+    background: #979899;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+}
+ul.slide>li.gwj>ul.book>li.active{
+    background: #DAC6A9;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+}
+ul.slide>li.hr>ul.book>li.active{
+    background: #848785;
+    background-image: url(../images/grim/book_rec.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+}
 ul.slide>li>ul.book>li:hover:before{
+    height: 6rem;
+    top: -6rem;
+}
+ul.slide>li>ul.book>li.active:before{
     height: 6rem;
     top: -6rem;
 }
@@ -291,7 +390,6 @@ ul.slide>li>ul.painting{
     top: 177px;
     width:500px;
     height: 800px;
-
 }
 ul.slide>li>ul.painting>li{
     position: absolute;
@@ -301,15 +399,33 @@ ul.slide>li>ul.painting>li{
     height: 20px;
     transition: .5s;
 }
+ul.slide>li>ul.painting>li.active{
+    z-index: 1;
+}
 ul.slide>li>ul.painting>li:before{
     content: '';
     width: 615px;
     height: 613px;
     position: absolute;
-    left: -57px;
+    left: -58px;
     top: -178px;
-    background-image: url(../images/grim/painting_before01.png);
+    /* background-image: url(../images/grim/painting_before01.png); */
     background-repeat: no-repeat;
+}
+ul.slide>li.sn>ul.painting>li:before{
+    background-image: url(../images/grim/painting_before01.png);
+}
+ul.slide>li.cs>ul.painting>li:before{
+    background-image: url(../images/grim/painting_before02.png);
+}
+ul.slide>li.jws>ul.painting>li:before{
+    background-image: url(../images/grim/painting_before03.png);
+}
+ul.slide>li.gwj>ul.painting>li:before{
+    background-image: url(../images/grim/painting_before04.png);
+}
+ul.slide>li.hr>ul.painting>li:before{
+    background-image: url(../images/grim/painting_before05.png);
 }
 ul.slide>li>ul.painting>li:after{
     content: '';
@@ -318,19 +434,78 @@ ul.slide>li>ul.painting>li:after{
     position: absolute;
     left: -57px;
     bottom: 0;
-    background-image: url(../images/grim/painting_after01.png);
+    /* background-image: url(../images/grim/painting_after01.png); */
     background-repeat: no-repeat;
 }
-ul.slide>li>ul.painting>li:nth-child(1){
+ul.slide>li.sn>ul.painting>li:after{
+    background-image: url(../images/grim/painting_after01.png);
+}
+ul.slide>li.cs>ul.painting>li:after{
+    background-image: url(../images/grim/painting_after02.png);
+}
+ul.slide>li.jws>ul.painting>li:after{
+    background-image: url(../images/grim/painting_after03.png);
+}
+ul.slide>li.gwj>ul.painting>li:after{
+    background-image: url(../images/grim/painting_after04.png);
+}
+ul.slide>li.hr>ul.painting>li:after{
+    background-image: url(../images/grim/painting_after05.png);
+}
+ul.slide>li.sn>ul.painting>li:nth-child(1){
     background-image: url(../images/grim/painting0101.png);
     background-repeat: no-repeat;
 }
-ul.slide>li>ul.painting>li:nth-child(2){
+ul.slide>li.sn>ul.painting>li:nth-child(2){
     background-image: url(../images/grim/painting0102.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.cs>ul.painting>li:nth-child(1){
+    background-image: url(../images/grim/painting0201.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.cs>ul.painting>li:nth-child(2){
+    background-image: url(../images/grim/painting0202.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.jws>ul.painting>li:nth-child(1){
+    background-image: url(../images/grim/painting0301.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.jws>ul.painting>li:nth-child(2){
+    background-image: url(../images/grim/painting0302.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.gwj>ul.painting>li:nth-child(1){
+    background-image: url(../images/grim/painting0401.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.gwj>ul.painting>li:nth-child(2){
+    background-image: url(../images/grim/painting0402.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.hr>ul.painting>li:nth-child(1){
+    background-image: url(../images/grim/painting0501.png);
+    background-repeat: no-repeat;
+}
+ul.slide>li.hr>ul.painting>li:nth-child(2){
+    background-image: url(../images/grim/painting0502.png);
     background-repeat: no-repeat;
 }
 ul.slide>li>ul.painting:hover>li{
     height: 100%;
+}
+ul.description>li{
+    display: none;
+}
+ul.description>li>h2{
+    padding-bottom: 20px;
+}
+ul.description>li.active{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-end;
 }
 .book_contents{
     width: 100%;
@@ -355,13 +530,80 @@ ul.slide>li>ul.painting:hover>li{
 .img_wrap{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 .img_wrap h2{
     writing-mode: vertical-lr;
+    padding-bottom: 40px;
+}
+.contents4 .prev_next {
+  position: absolute;
+  left: 400px;
+  bottom: 140px;
 }
 
+.contents4 .prev_next div {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 2px solid #a0a0a0;  
+  margin-right: 30px;
+  float: left;
+  font-size: 30px;
+  line-height: 54px;
+  color: #a0a0a0;
+  font-family: 'dotum';
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  transition: all 0.6s;
+}
 
+.contents4 .prev_next div:hover {
+  background-color: #a0a0a0;
+  color: #fff;
+}
+
+.contents4 span.slideNum {
+  font-weight: bold;
+  position: absolute;
+  left: 600px;
+  bottom: 140px;
+}
+
+.contents4 span.slideNum>b {
+  font-size: 30px;
+  color: #343434;
+  margin-right: 100px;
+  position: relative;
+}
+
+.contents4 span.slideNum>b::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #656565;
+  position: absolute;
+  left: 55px;
+  top: 50%;
+}
+.contents4 span.slideNum.on>b::after {
+  animation: varAni 1.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes varAni {
+    0% {
+        width: 0;
+    }  
+    100% {
+        width: 60px;
+    }
+  }
+.contents4 span.slideNum>em {
+    font-size: 26px;
+    color: #656565;
+  }
 
 
 
