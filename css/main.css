@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+*{
+  scroll-behavior: auto;
+}
+body{
+  color: #000;
+  background-color: #E7E6E4; /* 기본 배경색 */
+}
+section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* s1 */
+#s1 h1{
+  text-indent: -9999px;
+}
+
+#s1 .logo{
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-45%);
+  width: 10%;
+  opacity: 0;
+  animation: logo 1.5s 2.5s forwards;
+}
+@keyframes logo{
+  0%{
+    opacity: 0;
+    margin-top: -20px;
+  }
+  100%{
+    opacity: 1;
+    margin-top: 0
+  }
+}
+.top_line{
+  width: 2px;
+  height: 0;
+  background: #000;
+  position: absolute;
+  left: calc(50% - 1px);
+  top: 0px;
+  animation: grow 2s 1s forwards;
+}
+@keyframes grow{
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 20%;
+  }
+}
+#s1 .intro{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: intro 2.8s forwards;
+}
+@keyframes intro{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(60px);
+  }
+}
+#s1 .intro img{
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* #s2 */
+#s2{
+  background: url(../images/main/background_2.png) no-repeat;
+  background-size: cover;
+}
+#s2 .left_logo{
+  width: 37%;
+  height: 20vw;
+  background: #919C94;
+  border-radius: 500px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+#s2 .left_logo .hak1{
+  position: absolute;
+  right: 15%;
+  top: -13%;
+  width: 25%;
+}
+#s2 .left_logo .hak1 img{
+  width: 100%;
+  object-fit: cover;
+}
+#s2 .left_logo .s2_logo{
+  position: absolute;
+  left: 23%;
+  top: 20%;
+  width: 28%;
+}
+#s2 .left_logo .s2_logo img{
+  width: 100%;
+  object-fit: cover;
+}
+#s2 .r_txt{
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36%;
+}
+#s2 .r_txt h2{
+  font-family: "GapyeongHanseokbong-M";
+  margin-bottom: 50px;
+  font-size: 2.4rem;
+}
+#s2 .r_txt p{
+  font-size: 1.2rem;
+  line-height: 2;
+  font-weight: 600;
+}
+#s2 .hak2{
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  width: 10%;
+}
+#s2 .hak2 img{
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* #s3 */
+#s3{
+  background: url(../images/main/background_3.png) no-repeat;
+  background-size: cover;
+}
+#s3 .l_txt{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+#s3 .l_txt .span_list{
+  align-self: center;
+}
+#s3 .l_txt span{
+  font-family: "GapyeongHanseokbong-M";
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+#s3 .l_txt span.hanja{
+  position: relative;
+}
+#s3 .l_txt span.hanja::after{
+  content: '말씀 담';
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+  font-size: 1rem;
+}
+#s3 .l_txt h3{
+  font-family: "GapyeongHanseokbong-M";
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-size: 2.4rem;
+}
+#s3 .l_txt p{
+  font-size: 1.2rem;
+  line-height: 2;
+  font-weight: 600;
+}
+#s3 .r_img{
+  width: 40%;
+  height: 40vw;
+  background: var(--main-color-0);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+#s3 .r_img .s2_deco{
+  position: absolute;
+  left: -16%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22%;
+}
+#s3 .r_img .tiger{
+  position: absolute;
+  left: 44.5%;
+  top: 54%;
+  transform: translate(-50%, -50%);
+  width: 88%;
+  object-fit: cover;
+}
+
+/* #s4 ~ #s7*/
+#s4{
+  background: url(../images/main/art1.png) no-repeat;
+  background-size: cover;
+}
+.go_page{
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.go_page img{
+  height: 80%;
+  object-fit: cover;
+  animation: fadeIn 1.7s 1.3s forwards;
+  opacity: 0;
+}
+@keyframes fadeIn{
+  0%{opacity: 0;}  
+  100%{opacity: 1;}  
+}
+.go_right{
+  right: 0;
+  background: url(../images/main/light_texture.png) no-repeat;
+  box-shadow: 0 0 35px 15px #00000050;
+  animation: goRight 1.3s forwards;
+}
+@keyframes goRight {
+  0%{
+    right: 17.5%;
+    width: 0;
+  }
+  100%{
+    right: 0;
+    width: 35%;
+  }
+}
+.go_left{
+  left: 0;
+  background: url(../images/main/dark_texture.png) no-repeat;
+  box-shadow: 0 0 35px 15px #ffffff50;
+  animation: goLeft 1.3s forwards;
+}
+@keyframes goLeft {
+  0%{
+
+    width: 0;
+  }
+  100%{
+    left: 0;
+    width: 35%;
+  }
+}
+#s5{
+  background: url(../images/main/art2.png) no-repeat;
+  background-size: cover;
+}
+#s6{
+  background: url(../images/main/art3.png) no-repeat;
+  background-size: cover;
+}
+#s7{
+  background: url(../images/main/art4.png) no-repeat;
+  background-size: cover;
+}
+
+/* #s8 */
+#s8 .f_deco{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+}
+#s8 .f_deco img{
+  width: 100%;
+  object-fit: cover;
+}
+#s8 .f_txt{
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#s8 .f_txt h4::before{
+  content: '';
+  width: 140px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: -60px;
+}
+#s8 .f_txt h4{
+  font-family: "GapyeongHanseokbong-M";
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-bottom: 100px;
+  position: relative;
+  padding-top: 60px;
+}
+#s8 .f_txt .family{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+#s8 .f_txt .family a{
+  padding: 20px 40px;
+  border: 1px solid #000;
+  margin-right: 20px;
+  transition: .6s;
+}
+#s8 .f_txt .family a:hover{
+  background: #D0CFCE;
+}
+#s8 .f_txt .family a:last-child{
+  margin-right: 0;
+}
