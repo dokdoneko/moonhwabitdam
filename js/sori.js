@@ -9,4 +9,37 @@ $(function(){
       $(this).toggleClass("active");
     });
   });
+
+   // 스크롤 이벤트 리스너 등록
+   const sections = $(".subheading");
+   const windowHeight = $(window).height();
+ 
+   $(window).on("scroll resize", function() {
+    const scrollTop = $(this).scrollTop();
+    const windowCenter = scrollTop + windowHeight / 2;
+
+    sections.each(function() {
+      const section = $(this);
+      const sectionTop = section.offset().top;
+      const sectionHeight = section.outerHeight();
+      const sectionCenter = sectionTop + sectionHeight / 2;
+      const sectionBottom = sectionTop + sectionHeight;
+
+      // Calculate the visible range for each section
+      const visibleTop = scrollTop;
+      const visibleBottom = scrollTop + windowHeight;
+
+      // Check if the section is within the visible range
+      const isSectionVisible = sectionBottom > visibleTop && sectionTop < visibleBottom;
+
+      if (isSectionVisible) {
+        section.addClass("on");
+      } else {
+        section.removeClass("on");
+      }
+    });
+  });
+
+  AOS.init();
+
 });/* ready */
