@@ -1,66 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hanbitnuri</title>
+    <title>문화빛담</title>
+    <link rel="stylesheet" href="css/ani.css"> <!-- 스크롤 효과 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css"> <!-- 스크롤시 요소 등장 -->
     <link rel="stylesheet" href="css/common.css" />
-
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
     <script src="js/intro.js"></script>
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <div class="overlay-navigation">
       <nav role="navigation">
         <ul>
           <li>
-            <a href="index.html" data-content="Welcome to Korean Royal Culture">문화빛담</a>
+            <a href="#section1" data-content="Welcome to Korean Royal Culture"
+              >문화빛담</a
+            >
           </li>
           <li>
-            <a href="hanbok.html" data-content="Royal Attire">멋스럽지-<br />우리 한복</a>
+            <a href="#section2" data-content="Royal Attire"
+              >멋스럽지-<br />우리 한복</a
+            >
           </li>
           <li>
-            <a href="grim.html" data-content="Royal Paintings">보고싶지-<br />우리 그림</a>
+            <a href="#section3" data-content="Folk Paintings"
+              >보고싶지-<br />우리 그림</a
+            >
           </li>
           <li>
-            <a href="sori.html" data-content="Royal Songs">듣고싶지-<br />우리 소리</a>
+            <a href="#section4" data-content="Folk Songs"
+              >듣고싶지-<br />우리 소리</a
+            >
           </li>
           <li>
-            <a href="hansik.html" data-content="Korean Cuisine">먹고싶지-<br />우리 한식</a>
+            <a href="#section5" data-content="Korean Cuisine"
+              >먹고싶지-<br />우리 한식</a
+            >
           </li>
         </ul>
       </nav>
     </div>
+    <div class="overlay"></div>
+    <div class="open-overlay">
+      <span class="bar-top"></span>
+      <span class="bar-middle"></span>
+      <span class="bar-bottom"></span>
+    </div>
 
-    <main>
-      <div class="overlay"></div>
-      <div class="open-overlay">
-        <span class="bar-top"></span>
-        <span class="bar-middle"></span>
-        <span class="bar-bottom"></span>
-      </div>
+    <div class="wrap">
+      <section id="s1">
+        <div class="intro">
+          <img src="images/main/intro.png" alt="산수화 배경">
+        </div>
+        <h1>문화빛담</h1>
+        <div class="top_line"></div>
+        <img src="images/main/logo.png" alt="문화빛담" class="logo">
+      </section>
+      
+      <section id="s2">
+        <div class="left_logo">
+          <img src="images/main/hak1.png" alt="학 이미지" class="hak1">
+          <img src="images/main/logo.png" alt="문화빛담" class="s2_logo">
+        </div>
+        <div class="r_txt">
+          <h2>“문화의 빛을 담다”</h2>
+          <p>빛담은 ‘아름다운 빛을 담는다’는 순우리말입니다.<br>
+            문화빛담은 "문화의 빛을 담는 곳"이라는 뜻으로, 우리나라의 궁중 문화가 
+            가진 아름다움과 가치를 담아내고 널리 알리기 위해 만들어졌습니다.</p>  
+          <p>우리나라엔 설날, 추석과 같은 명절을 비롯해, 왕실에서 진행하는 기우제 등 많은 기념일이 있습니다. 이런 특별한 날 궁중 사람들은 어떻게 보냈을까요? 민요, 민화, 의복, 음식 4가지 주제에 초점을 맞춰 소개하겠습니다.</p> 
+        </div>
+        <img src="images/main/hak2.png" alt="학 이미지" class="hak2">
+      </section>
 
-      <ul class="section_wrap">
-        <li>
-          <section class="home" id="section1">
-            <h1>H1폰트입니다.</h1>
-            <h2>H2폰트입니다.</h2>
-            <h3>H3폰트입니다.</h3>
-            <h4>H4폰트입니다.</h4>
-            <h5>H5폰트입니다.</h5>
-            <p>p폰트입니다.</p>
-            <!-- <h2>메인 페이지</h2>
-            <p>메인 컨텐츠를 여기에 추가하세요</p> -->
-          </section>
-        </li>
-      </ul>
-    </main>
+      <section id="s3">
+        <div class="l_txt">
+          <div class="span_list">
+            <span>멋</span><span>+</span>
+            <span class="hanja">談</span><span>+</span>
+            <span>이</span>
+          </div>
+          <h3>마스코트 소개</h3>
+          <p>이름 : 멋담이<br>
+            의미 : 순우리말 ‘멋’과 이야기한다는 뜻의 談과,<br>
+            ~하는 사람을 뜻하는 접미사 ‘이’가 합성된 이름입니다.<br>
+            멋진 이야기를 하는 사람이란 의미입니다.</p>
+        </div>
+        <div class="r_img">
+          <img src="images/main/page2_deco.png" alt="장식" class="s2_deco">
+          <img src="images/main/tiger.png" alt="멋담이" class="tiger">
+        </div>
+      </section>
+
+      <section id="s4">
+        <div class="go_page go_right">
+          멋스럽지, 우리 한복
+          <img src="images/main/go_site_1.png" alt="한복 사이트 바로가기">
+        </div>
+      </section>
+
+      <section id="s5">
+        <div class="go_page go_left">
+          보고싶지, 우리 그림
+          <img src="images/main/go_site_2.png" alt="그림 사이트 바로가기">
+        </div>
+      </section>
+
+      <section id="s6">
+        <div class="go_page go_right">
+          듣고싶지, 우리 소리
+          <img src="images/main/go_site_3.png" alt="소리 사이트 바로가기">
+        </div>
+      </section>
+
+      <section id="s7">
+        <div class="go_page go_left">
+          먹고싶지, 우리 한식
+          <img src="images/main/go_site_4.png" alt="한식 사이트 바로가기">
+        </div>
+      </section>
+
+      <section id="s8">
+        <div class="f_deco">
+          <img src="images/main/footer_deco.png" alt="">
+        </div>
+        <div class="f_txt">
+          <h4>이 사이트는 비상업적 포트폴리오 목적으로 만들어졌습니다.<br>
+            궁중 문화에 대해 더 알고 싶으시다면 아래의 링크를 참고해 주세요.</h4>
+            <div class="family">
+              <a href="http://www.khs.go.kr">국가유산청</a>
+              <a href="http://www.royalcostume.net">한국궁중복식연구원</a>
+              <a href="http://www.aks.ac.kr">한국학중앙연구원</a>
+              <a href="http://www.food.co.kr">궁중음식연구원</a>
+            </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
