@@ -17,4 +17,44 @@ $(function () {
         }
     });
     /* 마우스 휠 이벤트 끝 */
+
+
+
+    
+    /* contents4 족자 탭 슬라이드 다운 */
+    $('.book li').click(function() {
+        let index = $(this).index();
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        $('.painting li').eq(index).addClass('active').siblings().removeClass('active');
+
+        $('.description li').eq(index + 1).addClass('active').siblings().removeClass('active');
+    });
+
+
+
+    /* contents4슬라이드 옆으로 */
+    let slideI = 0;
+    let slideTxt;
+    let slideLen = $('.contents4>ul.slide>li').length;
+    $('.slideNum em').text(slideLen);
+    function txtF() {
+      if ($(this).hasClass('prev')) {
+        if (slideI != 0) {
+          slideI--;
+        }
+      } else {
+        if (slideI < slideLen - 1) {
+          slideI++;
+        }
+      }
+  
+      console.log(slideI);
+      $('.contents4>ul.slide>li').removeClass('on').eq(slideI).addClass('on');
+      $('.slideNum b').text('0'+(slideI+1));
+    }
+  
+    $('.prev_next >div').click(txtF);
+
 });
