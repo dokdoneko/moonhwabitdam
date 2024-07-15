@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'kdg_Medium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/kdg_Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GapyeongHanseokbong-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongHanseokbong-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container {
+  width: 1360px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'GapyeongHanseokbong-Bold', 'kdg_Medium';
+  background: url(../images/hanbok/bg.png);
+}
+
+.main_visual {
+  width: 100%;
+  height: 900px;
+}
+
+.main_visual .con {
+  width: 1531px;
+  height: 555px;
+  margin: 172px 194px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*  background: red */
+}
+
+.main_visual .con .mv {
+  width: 555px;
+  height: 590px;
+  background: url(../images/hanbok/mv.png) no-repeat;
+}
+
+.main_visual .con strong {
+  color: #333;
+  font-family: "Gapyeong Hanseokbong";
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.main_visual.cloud {
+  background: url(../images/hanbok/cloud.png);
+}
+
+/* main */
+main {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  height: 1950px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 300px;
+}
+.bg1{
+  width: 100%;
+  height: 1839px;
+  background: url(../images/hanbok/con1_bg.png) no-repeat;
+}
+.bg2{
+  width: 100%;
+  height: 1839px;
+  background: url(../images/hanbok/con2_bg.png) no-repeat;
+}
+.bg3{  
+  width: 100%;
+  height: 1839px;
+  background: url(../images/hanbok/con3_bg.png) no-repeat;
+}
+section h2 {
+  width: 879px;
+  height: 130px;
+  color: #FFF;
+  font-family: "Solmoe KimDaeGeon";
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  background: #E4DADB;
+}
+section h2 img {
+  margin: 0 50px;
+}
+section .con {
+  width: 100%;
+  height: 817px;
+  /* background: #ccc; */
+  display: flex;
+  justify-content: space-around;
+}
+section .right {
+  width: 707px;
+  height: 492px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 190px;
+  position: relative;
+}
+section.right .txt {
+  width: 670px; height: 207px;
+  color: #333;
+  align-content: center;
+}
+
+section .right .txt b {
+  font-family: "Solmoe KimDaeGeon";
+  font-size: 60px;
+}
+
+section .right .txt img {
+  margin-left: 15px;
+}
+
+section .right .txt p {
+  font-family: "Gapyeong Hanseokbong";
+  font-size: 25px;
+  margin-top: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+section .right .hov{
+  margin: 128px 0 0 142px;
+}
+section .right .hov ul.h_all {
+  width: 464px;
+  height: 155px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+}
+
+section .right .hov ul.h_all li {
+  float: left;
+  position: relative;
+  width: 137px;
+  height: 155px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+section .right .hov ul.h_all li .h_after_txt {
+  background: rgba(88, 88, 88, 0.80);
+  width: 100%; height: 100%;
+  position: absolute; left: 0; top: 280px;
+  transition: .6s;
+}
+
+section .right .hov ul.h_all li:hover .h_after_txt {
+  top: 0;
+}
+
+section .right .hov ul.h_all li .h_after_txt::after {
+  content: '';
+  width: 90%;
+  height: 90%;
+  display: block;
+  position: absolute;
+  transition: all .6s;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+section .right .h_after_txt span{
+  width: 137px;
+  height: 155px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Gapyeong Hanseokbong";
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scroll {
+  padding-left: 80px;
+  position: absolute;
+  top: 91%;
+  left: 15%;
+}
+
+.scroll span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: -12px;
+  border-top: 3px solid #9F9F9F;
+  border-right: 3px solid #9F9F9F;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
+.scroll span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.scroll span:nth-of-type(2) {
+  left: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+
+.scroll span:nth-of-type(3) {
+  left: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: 32px;
+    /* 오른쪽으로 이동하는 효과 */
+  }
+}
+
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: 32px;
+    /* 오른쪽으로 이동하는 효과 */
+  }
+}
+
+
+footer{
+  height: 100vh;
+  position: relative;
+  background-color: #E4DADB;
+  background-image: url(../images/main/footer_deco.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-blend-mode: multiply; 
+}
+footer .f_deco{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+}
+footer .f_deco img{
+  width: 100%;
+  object-fit: cover;
+}
+footer .f_txt{
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .f_txt h4::before{
+  content: '';
+  width: 140px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: -60px;
+}
+footer .f_txt h4{
+  font-family: "GapyeongHanseokbong";
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-bottom: 100px;
+  position: relative;
+  padding-top: 60px;
+}
+footer .f_txt .family{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+footer .f_txt .family a{
+  padding: 20px 40px;
+  border: 1px solid #000;
+  margin-right: 20px;
+  transition: .6s;
+}
+footer .f_txt .family a:hover{
+  background: rgba(255, 255, 255, 0.50);
+}
+footer .f_txt .family a:last-child{
+  margin-right: 0;
+}
