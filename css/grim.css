@@ -105,7 +105,7 @@
 .contents1 p {
   font-size: 25px;
   text-align: left;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   font-weight: 400;
   line-height: 300%;
   transform: translateX(80px);
@@ -164,13 +164,13 @@
 
 .contents2 .con2h {
   font-size: 25px;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   font-weight: 400;
 }
 
 .contents2 .con2p {
   font-size: 15px;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   font-weight: 400;
 }
 
@@ -191,7 +191,7 @@ h2.sub {
   text-align: center;
   font-size: 50px;
   font-weight: 500;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   padding: 104px 0 124px;
 }
 
@@ -240,7 +240,7 @@ h2.sub {
   text-align: center;
   padding: 10%;
   z-index: 10;
-  font-family: "Gapyeong Hanseokbong";
+  font-family: 'GapyeongHanseokbong-M';
   opacity: 0;
   transition: 0.5s;
   text-shadow: 1px 1px 10px #fff;
@@ -251,13 +251,13 @@ h2.sub {
 .card .text p {
   padding-top: 15px;
   font-size: 15px;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   font-weight: 400;
 }
 
 .card .text h2 {
   font-size: 25px;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   font-weight: 400;
 }
 
@@ -302,7 +302,7 @@ h2.sub {
 
 /* contents4 */
 .contents4 {
-  font-family: "Gapyeong Hanseokbong";
+  font-family: 'GapyeongHanseokbong-M';
   height: calc(100vh + 100px);
 }
 
@@ -377,7 +377,7 @@ ul.slide>li>ul.book>li {
   align-items: center;
   padding: 63px 12px 24px;
   font-size: 25px;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   font-weight: 400;
   line-height: 60px;
   writing-mode: vertical-lr;
@@ -469,7 +469,7 @@ ul.slide>li.cs>ul.book>li.active {
   margin-top: 100px;
   margin-left: 100px;
   font-size: 25px;
-  font-family: Gapyeong Hanseokbong;
+  font-family: 'GapyeongHanseokbong-M';
   font-weight: 400;
   line-height: 60px;
 }
@@ -871,7 +871,7 @@ ul.description>li.active {
 }
 
 .footer .f_txt h4 {
-  font-family: "GapyeongHanseokbong";
+  font-family: 'GapyeongHanseokbong-M';
   font-size: 1.5rem;
   line-height: 2;
   margin-bottom: 100px;
