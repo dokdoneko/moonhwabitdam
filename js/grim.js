@@ -1,22 +1,4 @@
 $(function () {
-
-  /* 타이핑효과 */
-  let typingTxt = $('.contents1 .txt').text().split('');
- /*  typingTxt = typingTxt.text().split(''); */
-  let typingIndex = 0;
-  let typingInter;
-
-  function typing() {
-    if (typingIndex < typingTxt.length) {
-      $('#animated-text2').append(typingTxt[typingIndex]);
-      typingIndex++;
-    } else {
-      clearInterval(typingInter);
-      typingIndex = 0;
-    }
-  }
-  let ht = $(window).height();
-
   /* [공통] 마우스 휠 이벤트 */
   $('.wrap>section').on('wheel', function (e) {
     e.preventDefault();
@@ -29,13 +11,6 @@ $(function () {
 
     if (nav.length) {
       let moveTop = nav.offset().top;
-      if (moveTop == ht) {
-        typingInter = setInterval(typing, 100);
-      } else {
-        clearInterval(typingInter);
-        $('#animated-text2').empty();
-      }
-
       // console.log(moveTop);
       $('html,body').stop().animate({
         scrollTop: moveTop,
@@ -124,7 +99,4 @@ document.addEventListener('DOMContentLoaded', function () {
     animateText(); // 다시 애니메이션 실행
   }, 8000); // 5초 (5000밀리초)마다 실행
 });
-
-
-/*  */
 
