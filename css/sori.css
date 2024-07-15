@@ -8,6 +8,28 @@ body {
 .container {
   margin: 0 8rem;
 }
+
+.vid_modal{
+  width: 100%; height: 100vh;
+  position: fixed;
+  left: 0; top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 110;
+}
+.vid_modal i{
+  position: absolute; color: #fff; font-size: 60px;
+  cursor: pointer; top: 50px; right: 50%;
+  transition: .3s;
+}
+.vid_modal i:hover{
+  color: rgba(255, 255, 255, 0.80);
+}
+.vid_modal .inner_vid{
+  position: absolute;
+  left: 50%; top: 50%; transform: translate(-50%,-50%);
+}
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -356,6 +378,17 @@ img {
 .game-section .item.active .item-desc {
   transform: none;
   -webkit-transform: none;
+}
+.game-section .item.active .item-desc h2::after{
+  content: "";
+  background-image: url("../images/sori/button_play.svg");
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 .game-section .item-desc p {
   opacity: 0;
