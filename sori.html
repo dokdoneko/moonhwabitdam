@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon_io/favicon.ico">
+    <link rel="icon" href="images/favicon_io/android-chrome-192x192.png" sizes="192x192">
     <title>문화빛담</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
@@ -14,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/1f24d92328.js" crossorigin="anonymous"></script>
     <script src="js/intro.js"></script>
     <script src="js/sori.js"></script>
   </head>
@@ -48,6 +52,15 @@
         <span class="bar-middle"></span>
         <span class="bar-bottom"></span>
       </div>
+
+      <div class="vid_modal modal1">
+        <i class="fa-solid fa-xmark"></i>
+        <div class="inner_vid">
+            <iframe width="1260" height="630" src="https://www.youtube.com/embed/P_hrYhXTrgY?si=WDW78xXOA97vfhlc" 
+            title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div><!-- //.inner_vid -->
+    </div><!-- //.vid_modal -->
 
       <section class="hero">
         <div class="title_wrap">
@@ -84,7 +97,7 @@
         <section class="game-section">
           <div class="owl-carousel custom-carousel owl-theme">
           <div class="item active" style="background-image: url(images/sori/sul_01.png);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/P_hrYhXTrgY?si=WDW78xXOA97vfhlc">
               <h2>정악</h2>
               <p>정악은 조선시대 궁중에서 연주된 격조 높은 음악으로,
                 설날에는 왕과 왕실 가족들을 위한 특별한 공연이 열렸습니다. 
@@ -92,19 +105,19 @@
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/sul_02.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/XmyunFnpOA4?si=GrZ2QnH_enx2qMQU">
               <h2>범패</h2>
                 <p>범패는 불교 의식 음악으로, 설날 아침에 궁중의 사찰에서 왕과 왕비의 안녕과 국가의 평화를 기원하는 의식에서 연주되었습니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/sul_03.jfif);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/J1IUoMwToUM?si=dDf-w-NjPrpCe81R">
               <h2>영산회상</h2>
                 <p>영산회상은 조선시대 궁중에서 가장 많이 연주된 곡 중 하나로, 긴 시간 동안 연주되는 곡입니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/sul_04.jfif);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/fjnjJqvRVsU?si=5VkOTuEa7PrLq02r">
               <h2>보허자</h2>
                 <p>보허자는 조선시대 궁중 음악의 대표적인 곡으로, 정악의 하나로 궁중에서 자주 연주되었습니다.</p>
             </div><!-- //.item-desc -->
@@ -136,25 +149,25 @@
         <section class="game-section">
           <div class="owl-carousel custom-carousel owl-theme">
           <div class="item active" style="background-image: url(images/sori/chu01.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/nq1wDHeq9Qc?si=GYIf2uZkmmzmg902">
               <h2>가곡</h2>
               <p>가곡은 성악곡으로, 왕실 가족과 신하들이 함께 모여 부르던 음악입니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/chu02.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/-CAqEl82-P8?si=1JsfeW1FVV4_uFlJ">
               <h2>정재</h2>
                 <p>정재는 궁중 무용과 음악을 결합한 형태로, 추석에는 화려한 무대와 함께 연주되었습니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/chu03.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/XJakHOeySSo?si=1cK1iRSFpD69_216">
               <h2>동동</h2>
                 <p>동동은 추석 밤에 달을 보며 연주된 곡으로, 달맞이 의식에서 많이 불렸습니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/chu04.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/drS4Rq_E4eE?si=ZHfI0IBCslrMJFXm">
               <h2>처용무 </h2>
                 <p>처용무는 악귀를 쫓는 의미를 가진 춤으로, 이 춤을 위한 음악이 추석에도 자주 연주되었습니다</p>
             </div><!-- //.item-desc -->
@@ -187,25 +200,25 @@
         <section class="game-section">
           <div class="owl-carousel custom-carousel owl-theme">
           <div class="item active" style="background-image: url(images/sori/coro01.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/dNLLHvFxW7E?si=iEQUGX367nwFSaR0">
               <h2>종묘재례악</h2>
               <p>종묘제례악은 왕의 조상들에게 제사를 지내는 의식 음악으로, 즉위식에서도 연주되었습니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/coro02.jfif);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/Y2U0d8LBJ_g?si=qi2pUDDuBtz0bvcB">
               <h2>아악</h2>
                 <p>아악은 중국에서 전래된 궁중 음악으로, 매우 엄숙하고 격조 높은 음악입니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/coro03.jpeg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/8E0PLDtWNPU?si=KwgofgpvGNNk6rI6">
               <h2>대취타</h2>
                 <p>대취타는 군악으로, 왕의 행차와 즉위식에서 연주되었습니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/coro04.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/Bd7JEl1TNdw?si=kTLLvN7FkEni0V0R">
               <h2>용비어천가</h2>
                 <p>용비어천가는 세종대왕이 직접 지은 곡으로, 왕의 덕을 찬양하는 내용입니다.</p>
             </div><!-- //.item-desc -->
@@ -237,25 +250,25 @@
         <section class="game-section"> 
           <div class="owl-carousel custom-carousel owl-theme"> 
           <div class="item active" style="background-image: url(images/sori/rain01.jfif);"> 
-            <div class="item-desc"> 
-              <h2>제사악</h2> 
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/TTD9w60gK-o?si=KHg6_mJaCVNUw4-D"> 
+              <h2>문묘제례악</h2> 
               <p>제사악은 제례 의식에서 연주되는 음악으로, 기우제에서도 사용되었습니다.</p> 
             </div><!-- //.item-desc --> 
           </div><!-- //.item --> 
           <div class="item" style="background-image: url(images/sori/rain02.jfif);"> 
-            <div class="item-desc"> 
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/UPOVs0DNq88?si=lQPh7zF9oMUpWlXc"> 
               <h2>무속 음악</h2> 
                 <p>무속 음악은 기우제에서 신을 달래고 비를 기원하는 무당들이 연주하던 음악입니다.</p> 
             </div><!-- //.item-desc --> 
           </div><!-- //.item --> 
           <div class="item" style="background-image: url(images/sori/rain03.jpg);"> 
-            <div class="item-desc"> 
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/pYO11ddkgx0?si=9SU0wzdttgiPjQ2H"> 
               <h2>농부가</h2> 
                 <p>농부가는 농부들이 비를 기원하며 부르던 곡으로, 기우제에서도 사용되었습니다.</p> 
             </div><!-- //.item-desc --> 
           </div><!-- //.item --> 
           <div class="item" style="background-image: url(images/sori/rain04.jpg);"> 
-            <div class="item-desc"> 
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/YceQecRds0g?si=7P5PRnxpnc7e0VVN"> 
               <h2>사직대제악</h2> 
                 <p>사직대제악은 토지신과 곡식신에게 제사를 지내는 음악으로, 기우제에서도 연주되었습니다.</p> 
             </div><!-- //.item-desc --> 
@@ -286,25 +299,25 @@
         <section class="game-section">
           <div class="owl-carousel custom-carousel owl-theme">
           <div class="item active" style="background-image: url(images/sori/wedding01.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/Gk-Z52GOUAM?si=f5Ij8eZl1wwIgWMi">
               <h2>연향악</h2>
               <p>연향악은 연회와 축하 행사에서 연주되는 음악으로, 궁중혼례에서 주로 사용되었습니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/wedding02.jpg);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/DXHzXx9EGtM?si=8qcyafaPIbWuoTpw">
               <h2>궁중 무용 음악</h2>
                 <p>궁중 무용 음악은 혼례식 중에 춤과 함께 연주되는 음악입니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/wedding03.jpg);">
-            <div class="item-desc">
-              <h2>정동방곡</h2>
-                <p>정동방곡은 혼례식에서 신랑 신부의 행진에 맞추어 연주되던 곡입니다.</p>
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/4AEdmxBXaoY?si=chRB9dmeXagJK5gK">
+              <h2>태평서곡</h2>
+                <p>태평을 기원하는 의미로 궁중의 다양한 행사와 의식에서 연주되었습니다.</p>
             </div><!-- //.item-desc -->
           </div><!-- //.item -->
           <div class="item" style="background-image: url(images/sori/wedding04.jfif);">
-            <div class="item-desc">
+            <div class="item-desc" data-video-src="https://www.youtube.com/embed/wwbakPVo3p0?si=sn6G6VX5n8IUE1HC">
               <h2>기명</h2>
                 <p>기명은 혼례식의 각 단계에서 연주되는 음악으로, 혼례의 엄숙함과 경건함을 더합니다.</p>
             </div><!-- //.item-desc -->
