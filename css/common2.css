@@ -306,7 +306,7 @@ nav li:nth-of-type(4)::before {
   opacity: 0.9; 
 }
 nav li:nth-of-type(5) {
-  background-color: var(--main-color-4);
+  background: url(../images/nav_bg_hansik.png);
 }
 
 
