@@ -6,6 +6,7 @@
   background-attachment: fixed;
   position: relative;
 }
+
 .main_visual {
   background-image: url(../images/grim/grim_banner.png);
   position: relative;
@@ -15,18 +16,22 @@
   justify-content: center;
   align-items: center;
 }
+
 .title_wrap {
   width: 555px;
   height: 555px;
   position: relative;
   background-image: url(../images/sori/hero_door3.png);
-  /* background-image: url(../images/grim/main_circle.svg); */
+  background-image: url(../images/grim/main_circle.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   width: 426px;
-  transform: translateX(-100%);
+  /* transform: translateX(-100%); */
+  transform: translateY(-30%);
+  opacity: 0.8;
 }
+
 .outer_line {
   width: 195px;
   height: 427px;
@@ -45,6 +50,7 @@
   border: none;
   background: transparent;
 }
+
 .inner_line {
   width: 100%;
   height: 100%;
@@ -61,17 +67,21 @@
   border: none;
   background: transparent;
 }
+
 .inner_line em {
   font-size: 25px;
   font-style: normal;
 }
+
 .tiger {
   position: absolute;
   left: 40px;
   bottom: 0;
   mix-blend-mode: luminosity;
-  display: none;
+  opacity: 0.8;
+  /* display: none; */
 }
+
 .circle {
   position: absolute;
   top: 30%;
@@ -79,6 +89,7 @@
   transform: translate(-50%, -50%);
   opacity: 0.8;
 }
+
 .contents1 {
   display: flex;
   justify-content: center;
@@ -90,72 +101,111 @@
   background-size: auto;
   background-position: 77px center;
 }
+
 .contents1 p {
-  font-size: 22px;
+  font-size: 25px;
   text-align: left;
+  font-family: Gapyeong Hanseokbong;
+  font-weight: 400;
   line-height: 300%;
   transform: translateX(80px);
 }
-.contents1 p::after {
-    content: "";
-    background-image: url("../images/grim/grim_dojang.svg");
-    background-repeat: no-repeat;
-    background-size: "cover";
-    width: 31px;
-    height: 31px;
-    display: inline-block;
-    vertical-align: middle;
+
+.contents1 .con_txt1 {
+  margin-left: 200px;
 }
+
+.contents1 p::after {
+  content: "";
+  background-image: url("../images/grim/grim_dojang.svg");
+  background-repeat: no-repeat;
+  background-size: "cover";
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* [data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 1;
+  transform: translateZ(0);
+  margin-left: 130px;
+} */
 .contents2 {
   background-image: url(../images/grim/grim_love.png);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
+
 }
+
 .contents2 .text1,
 .contents2 .text2 {
   width: 555px;
   height: 250px;
-  transform: translateX(250px);
+  transform: translateX(200px);
 }
+
 .contents2 h2 {
-  font-size: 30px;
+  font-size: 25px;
+
 }
+
+.contents2 .text2 {
+  margin-top: 100px;
+}
+
 .contents2 p {
   line-height: 50px;
   font-size: 15px;
   position: relative;
 }
+
+.contents2 .con2h {
+  font-size: 25px;
+  font-family: Gapyeong Hanseokbong;
+  font-weight: 400;
+}
+
+.contents2 .con2p {
+  font-size: 15px;
+  font-family: Gapyeong Hanseokbong;
+  font-weight: 400;
+}
+
 .contents2 .text2 p::after {
-    content: "";
-    background-image: url("../images/grim/grim_dojang.svg");
-    background-repeat: no-repeat;
-    background-size: "cover";
-    width: 22px;
-    height: 22px;
-    display: inline-block;
-    vertical-align: middle;
+  content: "";
+  background-image: url("../images/grim/grim_dojang.svg");
+  background-repeat: no-repeat;
+  background-size: "cover";
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .contents3 {}
+
 h2.sub {
   text-align: center;
   font-size: 50px;
   font-weight: 500;
-  font-family: "GapyeongHanseokbong", "Noto Sans KR", sans-serif;
+  font-family: Gapyeong Hanseokbong;
   padding: 104px 0 124px;
 }
+
 .card_wrap {
   padding: 0 8rem;
   width: 100%;
   height: calc(100vh - 320px);
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 100px;
+  justify-content: space-evenly;
+  padding-bottom: 100px
 }
+
 .card {
-  width: 32%;
+  width: 25%;
   height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -163,27 +213,32 @@ h2.sub {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
+
 .contents3 .grim1 {
   background-image: url(../images/grim/grim1.png);
 }
+
 .contents3 .grim2 {
   background-image: url(../images/grim/grim2.png);
 }
+
 .contents3 .grim3 {
   background-image: url(../images/grim/grim3.png);
 }
+
 .card .text {
-  position: absolute;
-  left: 0;
-  top: 24%;
-  width: 100%;
-  height: 100%;
+  width: 370px;
+  height: 373px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 10% 10%;
+  text-align: center;
+  padding: 10%;
   z-index: 10;
   font-family: "Gapyeong Hanseokbong";
   opacity: 0;
@@ -192,14 +247,24 @@ h2.sub {
   /* width: 356px;
     height: 260px; */
 }
+
 .card .text p {
   padding-top: 15px;
-  font-size: 18px;
-  /* line-height: 50px; */
+  font-size: 15px;
+  font-family: Gapyeong Hanseokbong;
+  font-weight: 400;
 }
+
+.card .text h2 {
+  font-size: 25px;
+  font-family: Gapyeong Hanseokbong;
+  font-weight: 400;
+}
+
 .card:hover .text {
   opacity: 1;
 }
+
 .card::after {
   content: "";
   width: 100%;
@@ -213,18 +278,23 @@ h2.sub {
   transition: 0.5s;
   mix-blend-mode: screen;
 }
+
 .card.grim1::after {
   background-color: var(--main-color-0);
 }
+
 .card.grim2::after {
   background-color: var(--main-color-1);
 }
+
 .card.grim3::after {
   background-color: var(--main-color-4);
 }
+
 .card:hover::after {
   opacity: 1;
 }
+
 .section.content_temp {
   height: auto;
   border-bottom: 1px solid #ccc;
@@ -235,13 +305,16 @@ h2.sub {
   font-family: "Gapyeong Hanseokbong";
   height: calc(100vh + 100px);
 }
+
 .contents4 h2 {
   font-size: 60px;
 }
+
 .contents4 p {
   font-size: 25px;
   line-height: 60px;
 }
+
 ul.slide {
   width: 100%;
   height: 100%;
@@ -251,7 +324,8 @@ ul.slide {
   position: relative;
   display: flex;
 }
-ul.slide > li {
+
+ul.slide>li {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -261,81 +335,92 @@ ul.slide > li {
   opacity: 0;
   pointer-events: none;
 }
-ul.slide > li.on {
+
+ul.slide>li.on {
   opacity: 1;
   pointer-events: all;
 }
-ul.slide > li:nth-child(1) {
+
+ul.slide>li:nth-child(1) {
   background-image: url(../images/grim/sn_back.png);
 }
-ul.slide > li:nth-child(2) {
+
+ul.slide>li:nth-child(2) {
   background-image: url(../images/grim/cs_back.png);
 }
-ul.slide > li:nth-child(3) {
+
+ul.slide>li:nth-child(3) {
   background-image: url(../images/grim/jws_back.png);
 }
-ul.slide > li:nth-child(4) {
+
+ul.slide>li:nth-child(4) {
   background-image: url(../images/grim/gwj_back.png);
 }
-ul.slide > li:nth-child(5) {
+
+ul.slide>li:nth-child(5) {
   background-image: url(../images/grim/hr_back.png);
 }
-ul.slide > li > ul.book {
+
+ul.slide>li>ul.book {
   position: absolute;
   left: 8rem;
   top: 2rem;
   display: flex;
   gap: 20px;
 }
-ul.slide > li > ul.book > li {
+
+ul.slide>li>ul.book>li {
   width: 92px;
   height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 63px 12px 24px;
-  font-family: "Solmoe KimDaeGeon";
-  font-size: 26px;
+  font-size: 25px;
+  font-family: Gapyeong Hanseokbong;
+  font-weight: 400;
+  line-height: 60px;
   writing-mode: vertical-lr;
   position: relative;
   transition: 0.5s;
-  /* background: #D7DDE3;
-    background-image: url(../images/grim/book_rec.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto; */
 }
-ul.slide > li.sn > ul.book > li {
+
+ul.slide>li.sn>ul.book>li {
   background: #d7dde3;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
-ul.slide > li.cs > ul.book > li {
+
+ul.slide>li.cs>ul.book>li {
   background: #bfd9dc;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
-ul.slide > li.jws > ul.book > li {
+
+ul.slide>li.jws>ul.book>li {
   background: #d0d3d5;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
-ul.slide > li.gwj > ul.book > li {
+
+ul.slide>li.gwj>ul.book>li {
   background: #e4ded7;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
-ul.slide > li.hr > ul.book > li {
+
+ul.slide>li.hr>ul.book>li {
   background: #b2bab6;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
-ul.slide > li > ul.book > li:before {
+
+ul.slide>li>ul.book>li:before {
   content: "";
   width: 1px;
   height: 2rem;
@@ -346,79 +431,106 @@ ul.slide > li > ul.book > li:before {
   background: #000;
   transition: 0.5s;
 }
-ul.slide > li > ul.book > li:hover {
+
+ul.slide>li>ul.book>li:hover {
   transform: translateY(4rem);
 }
-ul.slide > li > ul.book > li.active {
+
+ul.slide>li>ul.book>li.active {
   transform: translateY(4rem);
-  /* background: #8B9CAD;
-    background-image: url(../images/grim/book_rec.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto; */
 }
-ul.slide > li.sn > ul.book > li.active {
+
+ul.slide>li.sn>ul.book>li.active {
   background: #8b9cad;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
 }
-ul.slide > li.cs > ul.book > li.active {
+
+ul.slide>li.cs>ul.book>li.active {
   background: #729ea3;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
 }
-ul.slide > li.jws > ul.book > li.active {
+
+.sn_circle,
+.cs_circle,
+.jws_circle,
+.hr_circle,
+.gwj_circle {
+  margin-left: 180px;
+  margin-bottom: 20px;
+}
+
+.matxt {
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 25px;
+  font-family: Gapyeong Hanseokbong;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+ul.slide>li.jws>ul.book>li.active {
   background: #979899;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
 }
-ul.slide > li.gwj > ul.book > li.active {
+
+ul.slide>li.gwj>ul.book>li.active {
   background: #dac6a9;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
 }
-ul.slide > li.hr > ul.book > li.active {
+
+ul.slide>li.hr>ul.book>li.active {
   background: #848785;
   background-image: url(../images/grim/book_rec.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
 }
-ul.slide > li > ul.book > li:hover:before {
+
+ul.slide>li>ul.book>li:hover:before {
   height: 6rem;
   top: -6rem;
 }
-ul.slide > li > ul.book > li.active:before {
+
+ul.slide>li>ul.book>li.active:before {
   height: 6rem;
   top: -6rem;
 }
-ul.slide > li > ul.painting {
+
+ul.slide>li>ul.painting {
   position: absolute;
   right: 16rem;
   top: 177px;
   width: 500px;
-  height: 800px;
+  height: 80vh;
 }
-ul.slide > li > ul.painting > li {
+
+ul.slide>li>ul.painting>li {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 20px;
   transition: 0.5s;
+  background-position: center center;
 }
-ul.slide > li > ul.painting > li.active {
+
+ul.slide>li>ul.painting>li.active {
   z-index: 1;
 }
-ul.slide > li > ul.painting > li:before {
+
+ul.slide>li>ul.painting>li:before {
   content: "";
   width: 615px;
   height: 613px;
@@ -428,22 +540,28 @@ ul.slide > li > ul.painting > li:before {
   /* background-image: url(../images/grim/painting_before01.png); */
   background-repeat: no-repeat;
 }
-ul.slide > li.sn > ul.painting > li:before {
+
+ul.slide>li.sn>ul.painting>li:before {
   background-image: url(../images/grim/painting_before01.png);
 }
-ul.slide > li.cs > ul.painting > li:before {
+
+ul.slide>li.cs>ul.painting>li:before {
   background-image: url(../images/grim/painting_before02.png);
 }
-ul.slide > li.jws > ul.painting > li:before {
+
+ul.slide>li.jws>ul.painting>li:before {
   background-image: url(../images/grim/painting_before03.png);
 }
-ul.slide > li.gwj > ul.painting > li:before {
+
+ul.slide>li.gwj>ul.painting>li:before {
   background-image: url(../images/grim/painting_before04.png);
 }
-ul.slide > li.hr > ul.painting > li:before {
+
+ul.slide>li.hr>ul.painting>li:before {
   background-image: url(../images/grim/painting_before05.png);
 }
-ul.slide > li > ul.painting > li:after {
+
+ul.slide>li>ul.painting>li:after {
   content: "";
   width: 615px;
   height: 43px;
@@ -453,76 +571,96 @@ ul.slide > li > ul.painting > li:after {
   /* background-image: url(../images/grim/painting_after01.png); */
   background-repeat: no-repeat;
 }
-ul.slide > li.sn > ul.painting > li:after {
+
+ul.slide>li.sn>ul.painting>li:after {
   background-image: url(../images/grim/painting_after01.png);
 }
-ul.slide > li.cs > ul.painting > li:after {
+
+ul.slide>li.cs>ul.painting>li:after {
   background-image: url(../images/grim/painting_after02.png);
 }
-ul.slide > li.jws > ul.painting > li:after {
+
+ul.slide>li.jws>ul.painting>li:after {
   background-image: url(../images/grim/painting_after03.png);
 }
-ul.slide > li.gwj > ul.painting > li:after {
+
+ul.slide>li.gwj>ul.painting>li:after {
   background-image: url(../images/grim/painting_after04.png);
 }
-ul.slide > li.hr > ul.painting > li:after {
+
+ul.slide>li.hr>ul.painting>li:after {
   background-image: url(../images/grim/painting_after05.png);
 }
-ul.slide > li.sn > ul.painting > li:nth-child(1) {
+
+ul.slide>li.sn>ul.painting>li:nth-child(1) {
   background-image: url(../images/grim/painting0101.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.sn > ul.painting > li:nth-child(2) {
+
+ul.slide>li.sn>ul.painting>li:nth-child(2) {
   background-image: url(../images/grim/painting0102.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.cs > ul.painting > li:nth-child(1) {
+
+ul.slide>li.cs>ul.painting>li:nth-child(1) {
   background-image: url(../images/grim/painting0201.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.cs > ul.painting > li:nth-child(2) {
+
+ul.slide>li.cs>ul.painting>li:nth-child(2) {
   background-image: url(../images/grim/painting0202.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.jws > ul.painting > li:nth-child(1) {
+
+ul.slide>li.jws>ul.painting>li:nth-child(1) {
   background-image: url(../images/grim/painting0301.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.jws > ul.painting > li:nth-child(2) {
+
+ul.slide>li.jws>ul.painting>li:nth-child(2) {
   background-image: url(../images/grim/painting0302.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.gwj > ul.painting > li:nth-child(1) {
+
+ul.slide>li.gwj>ul.painting>li:nth-child(1) {
   background-image: url(../images/grim/painting0401.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.gwj > ul.painting > li:nth-child(2) {
+
+ul.slide>li.gwj>ul.painting>li:nth-child(2) {
   background-image: url(../images/grim/painting0402.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.hr > ul.painting > li:nth-child(1) {
+
+ul.slide>li.hr>ul.painting>li:nth-child(1) {
   background-image: url(../images/grim/painting0501.png);
   background-repeat: no-repeat;
 }
-ul.slide > li.hr > ul.painting > li:nth-child(2) {
+
+ul.slide>li.hr>ul.painting>li:nth-child(2) {
   background-image: url(../images/grim/painting0502.png);
   background-repeat: no-repeat;
 }
-ul.slide > li > ul.painting:hover > li {
+
+ul.slide>li>ul.painting:hover>li {
   height: 100%;
 }
-ul.description > li {
+
+ul.description>li {
   display: none;
 }
-ul.description > li > h2 {
+
+ul.description>li>h2 {
   padding-bottom: 20px;
 }
-ul.description > li.active {
+
+ul.description>li.active {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: flex-end;
 }
+
 .book_contents {
   width: 100%;
   height: 60vh;
@@ -531,40 +669,48 @@ ul.description > li.active {
   display: flex;
   justify-content: space-between;
 }
+
 .book_contents div {
   width: 50%;
   height: 100%;
 }
+
 .text_wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .text_wrap p {
   word-wrap: break-word;
 }
+
 .img_wrap {
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
+
 .img_wrap h2 {
   writing-mode: vertical-lr;
   padding-bottom: 40px;
   display: flex;
-  align-items: center; 
+  align-items: center;
+  margin-left: 50px;
 }
+
 .img_wrap h2::after {
-    content: "";
-    background-image: url("../images/grim/grim_dojang.svg");
-    background-repeat: no-repeat;
-    background-size: "cover";
-    width: 31px;
-    height: 31px;
-    display: inline-block;
-    vertical-align: middle;
-    background-position: center center;
+  content: "";
+  background-image: url("../images/grim/grim_dojang.svg");
+  background-repeat: no-repeat;
+  background-size: "cover";
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  vertical-align: middle;
+  background-position: center center;
 }
+
 .contents4 .prev_next {
   position: absolute;
   left: 400px;
@@ -600,14 +746,14 @@ ul.description > li.active {
   bottom: 140px;
 }
 
-.contents4 span.slideNum > b {
+.contents4 span.slideNum>b {
   font-size: 30px;
   color: #343434;
   margin-right: 100px;
   position: relative;
 }
 
-.contents4 span.slideNum > b::after {
+.contents4 span.slideNum>b::after {
   content: "";
   display: block;
   width: 60px;
@@ -617,19 +763,23 @@ ul.description > li.active {
   left: 55px;
   top: 50%;
 }
-.contents4 span.slideNum.on > b::after {
+
+.contents4 span.slideNum.on>b::after {
   animation: varAni 1.3s;
   animation-fill-mode: forwards;
 }
+
 @keyframes varAni {
   0% {
     width: 0;
   }
+
   100% {
     width: 60px;
   }
 }
-.contents4 span.slideNum > em {
+
+.contents4 span.slideNum>em {
   font-size: 26px;
   color: #656565;
 }
@@ -641,49 +791,75 @@ ul.description > li.active {
   justify-content: center;
   align-items: center;
 }
+
 .contents5 .txt5 {
   position: relative;
 }
+
 .contents5 .txt5 p {
   font-size: 35px;
   font-family: "solmoeKimDaeGeon", sans-serif;
   writing-mode: vertical-lr;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 250%;
   letter-spacing: 0.2em;
+  overflow: hidden;
+  white-space: nowrap;
 }
+
+.contents5 .txt5 p span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
 .contents5 .txt5 p::after {
   content: "";
   background-image: url("../images/grim/grim_dojang.svg");
   background-repeat: no-repeat;
-  background-size: "cover";
+  background-size: cover;
   width: 31px;
   height: 31px;
   display: inline-block;
   margin-top: 15px;
+  margin-right: 15px;
   vertical-align: middle;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* footer */
 .footer {
   background-image: url(../images/grim/footer.png);
 }
+
 .footer .f_deco {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 40%;
 }
+
 .footer .f_deco img {
   width: 100%;
   object-fit: cover;
 }
+
 .footer .f_txt {
   position: absolute;
   left: 20%;
   top: 50%;
   transform: translateY(-50%);
 }
+
 .footer .f_txt h4::before {
   content: "";
   width: 140px;
@@ -693,6 +869,7 @@ ul.description > li.active {
   left: 0;
   top: -60px;
 }
+
 .footer .f_txt h4 {
   font-family: "GapyeongHanseokbong";
   font-size: 1.5rem;
@@ -701,19 +878,23 @@ ul.description > li.active {
   position: relative;
   padding-top: 60px;
 }
+
 .footer .f_txt .family {
   font-weight: 600;
   font-size: 1.5rem;
 }
+
 .footer .f_txt .family a {
   padding: 20px 40px;
   border: 1px solid #000;
   margin-right: 20px;
   transition: 0.6s;
 }
+
 .footer .f_txt .family a:hover {
   background: #d0cfce;
 }
+
 .footer .f_txt .family a:last-child {
   margin-right: 0;
 }
