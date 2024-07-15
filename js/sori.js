@@ -42,4 +42,20 @@ $(function(){
 
   AOS.init();
 
+  /* video modal */
+  $(document).ready(function(){
+    /* video modal */
+    $('.item-desc').on('click', function(){
+      var videoSrc = $(this).data('video-src');
+      $('.vid_modal iframe').attr('src', videoSrc);
+      $('.vid_modal').fadeIn();
+    });
+  
+    $('.vid_modal i').click(function(){    
+      $('.vid_modal').fadeOut(function() {
+        $('.vid_modal iframe').attr('src', '');
+      });
+    });
+  });
+
 });/* ready */
