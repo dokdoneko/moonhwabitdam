@@ -1,4 +1,6 @@
 $(function () {
+
+  let ht = $(window).height();
   /* [공통] 마우스 휠 이벤트 */
   $('.wrap>section').on('wheel', function (e) {
     e.preventDefault();
@@ -11,15 +13,14 @@ $(function () {
 
     if (nav.length) {
       let moveTop = nav.offset().top;
+
+
       // console.log(moveTop);
       $('html,body').stop().animate({
         scrollTop: moveTop,
       }, 500);
     }
   });
-
-
-
   /* contents4 족자 탭 슬라이드 다운 */
   $('.book li').click(function () {
     let index = $(this).index();
@@ -99,4 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     animateText(); // 다시 애니메이션 실행
   }, 8000); // 5초 (5000밀리초)마다 실행
 });
+
+
+/*  */
 
