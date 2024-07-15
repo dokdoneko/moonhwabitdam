@@ -271,7 +271,16 @@ nav li:nth-of-type(1) {
 }
 nav li:nth-of-type(2) {
   background-color: var(--main-color-1);
+  background-image:     
+  url(../images/nav_bg_hanbok.svg),
+  url(../images/nav_bg_hanbok1.svg),
+  url(../images/nav_bg_hanbok2.svg),
+  url(../images/nav_bg_hanbok3.svg);
+background-repeat: no-repeat;
+background-size: 40px 40px;
+background-position: top left, top right, bottom left, bottom right;
 }
+
 nav li:nth-of-type(3) {
   background-color: var(--main-color-2);
   overflow: hidden;
