@@ -93,6 +93,7 @@ section h2 {
   display: flex;
   align-items: center;
   background: #E4DADB;
+  transform: translateY(-50px);
 }
 section h2 img {
   margin: 0 50px;
@@ -103,6 +104,7 @@ section .con {
   /* background: #ccc; */
   display: flex;
   justify-content: space-around;
+  transform: translateY(-30px);
 }
 section .right {
   width: 707px;
@@ -137,6 +139,7 @@ section .right .txt p {
 
 section .right .hov{
   margin: 128px 0 0 142px;
+  position: relative;
 }
 section .right .hov ul.h_all {
   width: 464px;
@@ -191,8 +194,8 @@ section .right .h_after_txt span{
 .scroll {
   padding-left: 80px;
   position: absolute;
-  top: 91%;
-  left: 15%;
+  top: 49%;
+  left: -30px;
 }
 
 .scroll span {
