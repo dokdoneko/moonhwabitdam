@@ -1,53 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hanbitnuri</title>
-    <link rel="stylesheet" href="css/common.css" />
+<html lang="ko">
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hansik</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/common2.css" />
+  <link rel="stylesheet" href="css/ani.css" />
+  <link rel="stylesheet" href="css/hansik.css" />
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/b806d5492f.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/intro.js"></script>
+  <script src="js/hansik.js" defer></script>
+</head>
 
+<body>
+  <div class="overlay-navigation">
+    <nav role="navigation">
+      <ul>
+        <li>
+          <a href="index.html" data-content="Welcome to Korean Royal Culture">문화빛담</a>
+        </li>
+        <li>
+          <a href="hanbok.html" data-content="Royal Attire">멋스럽지-<br />우리 한복</a>
+        </li>
+        <li>
+          <a href="grim.html" data-content="Royal Paintings">보고싶지-<br />우리 그림</a>
+        </li>
+        <li>
+          <a href="sori.html" data-content="Royal Songs">듣고싶지-<br />우리 소리</a>
+        </li>
+        <li>
+          <a href="hansik.html" data-content="Korean Cuisine">먹고싶지-<br />우리 한식</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- //.navigation -->
+  </div>
+  <!-- //.overlay-navigation -->
 
-    <script src="js/intro.js"></script>
-  </head>
-  <body>
-    <div class="overlay-navigation">
-      <nav role="navigation">
-        <ul>
-          <li>
-            <a href="index.html" data-content="Welcome to Korean Royal Culture">문화빛담</a>
-          </li>
-          <li>
-            <a href="hanbok.html" data-content="Royal Attire">멋스럽지-<br />우리 한복</a>
-          </li>
-          <li>
-            <a href="grim.html" data-content="Royal Paintings">보고싶지-<br />우리 그림</a>
-          </li>
-          <li>
-            <a href="sori.html" data-content="Royal Songs">듣고싶지-<br />우리 소리</a>
-          </li>
-          <li>
-            <a href="hansik.html" data-content="Korean Cuisine">먹고싶지-<br />우리 한식</a>
-          </li>
-        </ul>
-      </nav>
+  <main>
+    <div class="overlay"></div>
+    <div class="open-overlay">
+      <span class="bar-top"></span>
+      <span class="bar-middle"></span>
+      <span class="bar-bottom"></span>
     </div>
 
-    <main>
-      <div class="overlay"></div>
-      <div class="open-overlay">
-        <span class="bar-top"></span>
-        <span class="bar-middle"></span>
-        <span class="bar-bottom"></span>
-      </div>
+    <div class="wrap">
+      <section id="page">
+        <div class="main">
+          <img data-aos="fade-down" data-aos-duration="2500" src="images/hansik/page_brush.png" alt="메인 붓 이미지" />
+          <p data-aos="fade-up" data-aos-duration="2500">
+            대한민국은 사계절이 뚜렷하여 쌀과 잡곡의 생산이 다양하게 이루어지는
+            편으로 이를 이용한 조리법이 일찍부터 개발되었습니다<br />
+            게다가 삼면이 바다로 둘러싸여 수산물이 풍부하고 장류, 김치류, 젓갈류
+            등의 발효식품의 개발과 식품저장 기술력도 월등하답니다<br />
+            이와 같이 대한민국의 음식은 계절과 지역에 따른 특성을 잘 살리면서
+            조화된 맛을 중요하게 여겼습니다
+          </p>
+        </div>
+        <!-- //main -->
+      </section>
+      <!-- //.page -->
 
-      <p>한식페이지입니다.</p>
-    </main>
-  </body>
+      <section id="sura">
+        <div class="inner">
+          <div class="txt">
+            <h3>
+              수라상
+              <img src="images/hansik/stamp.png" alt="한국적인 도장 이미지" />
+            </h3>
+            <p data-aos="fade-left">
+              “한국인은 밥심” 이라는 말이 있듯이, 임금은 늘 풍부한 식사를
+              하시곤했습니다<br />
+              수라상은 밥의 높임말인 진지의 궁중 한정 극존칭으로 임금이 드시는
+              식사를 일컫는 말입니다
+            </p>
+          </div>
+          <!-- //txt -->
+
+          <div class="swiper card_all">
+            <ul class="card swiper-wrapper">
+              <li class="on swiper-slide">
+                <img src="images/hansik/sura_rice.png" alt="" />
+                <h3>흰밥</h3>
+                <p>
+                  벼농사로 수확한 멥쌀로 지은 밥으로, <br />
+                  벼는 너무 적은 양만 생산된다는 단점으로 쌀이 귀해 <br />
+                  궁중에서만 볼 수 있는 귀한 주식
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/sura_gom.png" alt="" />
+                <h3>곰국</h3>
+                <p>
+                  '뭉그러지도록 푹 끓이다' 라는 뜻의 ‘곰’ <br />
+                  소의 여러부위를 고아 끓인 국으로 <br />
+                  높은 영양가와 단백한 맛이 일품이며 <br />
+                  공이 많이 들어가는 진귀한 음식
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/sura_kimchi.png" alt="" />
+                <h3>김치</h3>
+                <p>
+                  한국의 전통발효식품이자 일종의 조리 <br />
+                  지역마다 다른 요리법과 재료를 사용해 다양한 김치가 <br />
+                  존재해 향토음식으로서의 정체성을 가지는 대표 반찬
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/sura_jang.png" alt="" />
+                <h3>장</h3>
+                <p>
+                  된장, 고추장, 간장 등 식재료를 발효해 만드는 조미료 <br />
+                  보존기간이 길고 적은 양으로도 <br />
+                  많은 염분, 아미노산 등을 섭취할 수 있는 음식 <br />
+                  비빔밥은 장을 활용해 먹던 대표적인 음식
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/sura_gochjang.png" alt="" />
+                <h3>고추장 조치</h3>
+                <p>
+                  조치는 궁중에서 찌개를 이르던 말 <br />
+                  냄비나 뚝배기에 건더기를 넣고 <br />
+                  물과 양념인 고추장을 넣고 끓여내는 요리
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/sura_galbi.png" alt="" />
+                <h3>갈비찜</h3>
+                <p>
+                  소갈비를 이용한 찜 요리 <br />
+                  정확히 말하자면 찜이 아니라 조림에 가까운 조리 방식 <br />
+                  소는 당시에 값비싼 고기였기 때문에 <br />
+                  궁중음식으로만 먹던 고귀한 음식
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- //.card_all -->
+        </div>
+        <!-- //.inner -->
+        <img src="images/hansik/sura_1.png" alt="" class="sura_1" />
+        <img src="images/hansik/sura_2.png" alt="" class="sura_2" />
+      </section>
+      <!-- //.sura -->
+
+      <section id="new">
+        <div class="inner">
+          <div class="txt">
+            <h3>
+              &emsp;설날
+              <img src="images/hansik/stamp.png" alt="한국적인 도장 이미지" />
+            </h3>
+            <p data-aos="fade-left">
+              새로운 한 해를 맞이한다는 큰 의미를 가지던 명절, 설날<br />
+              새해의 대표음식은 떡국으로 궁중 뿐 아니라 모든 집이 떡국을
+              끓여먹는 풍습이 있었습니다
+            </p>
+          </div>
+          <!-- //txt -->
+
+          <div class="swiper card_all">
+            <ul class="card swiper-wrapper">
+              <li class="on swiper-slide">
+                <img src="images/hansik/new_dduk.png" alt="" />
+                <h3>떡국</h3>
+                <p>
+                  긴 가래떡을 썰어서 물에 넣고 끓인 국으로 <br />
+                  쇠고기나 사골 육수로 만드는 것이 일반적이며, <br />
+                  다 끓여진 떡국 위에 <br />
+                  고명을 올려 시각적인 조화까지 신경 쓴 음식
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/new_sujung.png" alt="" />
+                <h3>수정과</h3>
+                <p>
+                  한국의 전통음료 중 하나로, <br />
+                  생강과 계피를 끓인 물에 꿀이나 설탕으로 <br />
+                  단 맛을 내어 차게 해 마시던 수정과 <br />
+                  곶감과 잣을 띄워 마시기도 한 음료
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/new_jap.png" alt="" />
+                <h3>잡채</h3>
+                <p>
+                  채소와 삶은 당면을 간장양념으로 볶아 만드는 잡채 <br />
+                  쫄깃한 당면의 식감과 각종 재료와 양념의 조화로 <br />
+                  자극적이지 않아 많은 사랑을 받던 요리
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/new_domi.png" alt="" />
+                <h3>도미대파찜</h3>
+                <p>
+                  조선시대 요리책에 나올 정도로 활용도가 높은 도미에 <br />
+                  대파를 올려 함께 쪄서 먹던 생선찜 <br />
+                  흰살 생선의 대표주자로 어떤 방법으로 요리해도 <br />
+                  맛이 일품이라 설날에 함께 먹던 요리
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/new_ggochi.png" alt="" />
+                <h3>화양적</h3>
+                <p>
+                  고기와 함께 버섯, 김치, 오징어 등을 꽂아 구워먹는 <br />
+                  음식으로 작게 만드는 산적꼬치가 화양적 <br />
+                  오늘날까지도 주로 해먹을 정도로 간편하고 <br />
+                  맛이 좋은 명절 음식 중 하나
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- //.card_all -->
+        </div>
+        <!-- //.inner -->
+        <img src="images/hansik/new_1.png" alt="" class="new_1">
+        <img src="images/hansik/new_2.png" alt="" class="new_2">
+      </section>
+      <!-- //.new -->
+
+      <section id="chu">
+        <div class="inner">
+          <div class="txt">
+            <h3>
+              &emsp;추석
+              <img src="images/hansik/stamp.png" alt="한국적인 도장 이미지" />
+            </h3>
+            <p data-aos="fade-left">
+              수확을 앞두고 풍년을 기원하며 시간을 보내던 명절, 추석<br />
+              임금이 직접 제사를 지내는 국가 행사였으며, 평상시 반상에
+              제철음식을 곁들여 먹곤 했습니다
+            </p>
+          </div>
+          <!-- //txt -->
+
+          <div class="swiper card_all">
+            <ul class="card swiper-wrapper">
+              <li class="on swiper-slide">
+                <img src="images/hansik/chu_bam.png" alt="" />
+                <h3>사태밤찜</h3>
+                <p>
+                  사태는 소의 다리 부분으로 퍽퍽한 살코기인 데다 <br />
+                  육질이 단단하여 장조림 만들 때 많이 사용 <br />
+                  사태와 밤을 함께 쪄 만들어 먹던 명절음식
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/chu_shvshv.png" alt="" />
+                <h3>신선로</h3>
+                <p>
+                  간장베이스에 떡과 소고기와 야채를 <br />
+                  함께 볶아 만든 떡볶이로 <br />
+                  임금의 수라상에 올린 요리라서 궁중떡볶이
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/chu_song.png" alt="" />
+                <h3>삼색송편</h3>
+                <p>
+                  얇게 저민 수육안 편육과 <br />
+                  제철 채소를 섞어서 차게하여 만든 음식으로 <br />
+                  먹기 좋게 담은 냉채 위에 고명을 올려 꾸며 넣어 <br />
+                  시각적으로나 미각적으로나 훌륭한 궁중음식
+                </p>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/chu_bam.png" alt="" />
+                <h3>밤단자</h3>
+                <p>
+                  밤단자는 찐 찹쌀가루 반죽에 밤으로 만든 소를 넣고 <br />
+                  밤 고물을 묻힌 떡으로 손이 많이 가기 때문에 <br />
+                  궁중에서 제사 차례상에 올리던 고급 떡
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- //.card_all -->
+        </div>
+        <!-- //.inner -->
+        <img src="images/hansik/chu_1.png" alt="" class="chu_1">
+        <img src="images/hansik/chu_2.png" alt="" class="chu_2">
+        <img src="images/hansik/chu_3.png" alt="" class="chu_3">
+      </section>
+      <!-- //.chu -->
+
+      <section id="medi">
+        <div class="inner">
+          <div class="txt">
+            <h3>
+              조리법
+              <img src="images/hansik/stamp.png" alt="한국적인 도장 이미지" />
+            </h3>
+            <p data-aos="fade-left">
+              한국의 전통궁중음식은 현대까지도 즐겨먹는 음식들이 많습니다<br />
+              한식당을 방문하는 것도 좋지만 직접 만들어 먹으며 다양한 한국
+              문화를 즐겨보는건 어떠신가요
+            </p>
+          </div>
+          <!-- //txt -->
+
+          <div class="swiper card_all">
+            <ul class="card swiper-wrapper">
+              <li class="on swiper-slide">
+                <img src="images/hansik/medi_bam.png" alt="" />
+                <h3>밤단자 조리법</h3>
+                <p>
+                  멥쌀을 이용해 만든 고급 떡 <br />
+                  밤의 고소함과 담백함을 맛볼 수 있는 음식
+                </p>
+                <a target="_blank" href="https://youtu.be/dyDhv5npIWM?feature=shared">
+                  <i class="fa-solid fa-plus"></i>
+                  영상전체보기
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/medi_rice.png" alt="" />
+                <h3>쌀밥 조리법</h3>
+                <p>
+                  한국인의 주식인 쌀밥을 만들어 먹는 조리법 <br />
+                  따뜻할 때 꼭꼭 여러번 씹어 먹으면 <br />
+                  은은하게 도는 단 맛을 더욱 많이 즐길 수 있는 음식
+                </p>
+                <a target="_blank" href="https://youtu.be/w1w3BLIKZ0Q?feature=shared">
+                  <i class="fa-solid fa-plus"></i>
+                  영상전체보기
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/medi_satae.png" alt="" />
+                <h3>사태밤찜 조리법</h3>
+                <p>
+                  한우 사태와 밤을 함께 쪄 먹는 조리법 <br />
+                  콜라겐이 풍부해 건강에도 좋고 식감도 좋은 음식
+                </p>
+                <a target="_blank" href="https://youtu.be/qtsnUSFgRtU?feature=shared">
+                  <i class="fa-solid fa-plus"></i>
+                  영상전체보기
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/medi_dduk.png" alt="" />
+                <h3>떡국 조리법</h3>
+                <p>
+                  가래떡을 썰어 육수를 낸 국에 넣어 끓여 만드는 조리법 <br />
+                  재료와 고명을 입맛에 맞게 다양하게 추가해 <br />
+                  먹어도 맛이 좋은 설날의 대표 음식
+                </p>
+                <a target="_blank" href="https://youtu.be/eoqNhXWOtgY?feature=shared">
+                  <i class="fa-solid fa-plus"></i>
+                  영상전체보기
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/medi_gimchi.png" alt="" />
+                <h3>김치 조리법</h3>
+                <p>
+                  천연조미료와 과일로 단맛과 감칠맛을 살린 김장 담그기 <br />
+                  익을 수록 맛이 좋고 한 번 담그면 <br />
+                  1년 내내 대표반찬으로 올려먹을 수 있는 음식
+                </p>
+                <a target="_blank" href="https://youtu.be/S7qcu7iFvB4?feature=shared">
+                  <i class="fa-solid fa-plus"></i>
+                  영상전체보기
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <img src="images/hansik/medi_ggochi.png" alt="" />
+                <h3>화양적 조리법</h3>
+                <p>
+                  간단한 재료로 색상조화를 보이는 화양적 조리법 <br />
+                  재료손질 작업에 세심함을 요하지만 <br />
+                  여러 영양분을 한 번에 섭취할 수 있는 건강에 좋은 음식
+                </p>
+                <a target="_blank" href="https://youtu.be/bkio2SC6Maw?feature=shared">
+                  <i class="fa-solid fa-plus"></i>
+                  영상전체보기
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- //.card_all -->
+        </div>
+        <!-- //.inner -->
+        <img src="images/hansik/medi_1.png" alt="" class="medi_1">
+        <img src="images/hansik/medi_2.png" alt="" class="medi_2">
+      </section>
+      <!-- //.medi -->
+
+      <footer>
+        <div class="f_txt">
+          <h4 data-aos="fade-left">이 사이트는 비상업적 포트폴리오 목적으로 만들어졌습니다.<br>
+            궁중 문화에 대해 더 알고 싶으시다면 아래의 링크를 참고해 주세요.</h4>
+          <div class="family">
+            <a href="http://www.khs.go.kr">국가유산청</a>
+            <a href="http://www.royalcostume.net">한국궁중복식연구원</a>
+            <a href="http://www.aks.ac.kr">한국학중앙연구원</a>
+            <a href="http://www.food.co.kr">궁중음식연구원</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+
 </html>
