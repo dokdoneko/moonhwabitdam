@@ -131,6 +131,7 @@ section .right .txt img {
 
 section .right .txt p {
   font-family: "Gapyeong Hanseokbong";
+  font-family: 'GapyeongHanseokbong-M';
   font-size: 25px;
   margin-top: 20px;
   font-weight: 300;
