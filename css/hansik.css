@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+*{
+  scroll-behavior: auto;
+}
+body{
+  color: #000;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+}
+section .inner {
+  width: 1660px; height: 856px;
+  display: flex; flex-direction: column; justify-content: space-evenly;
+  overflow: hidden;
+}
+section .txt {
+  width: 1200px; height: 249px;
+  display: flex; align-items: flex-end; justify-content: space-around;
+}
+section .txt h3 {
+  height: 243px;
+  writing-mode: vertical-lr;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: "solmoeKimDaeGeon"; font-size: 60px; font-weight: 400;
+}
+section .txt h3 >img {
+  width: 48px; height: 48px;
+}
+section .txt >p {
+  width: 1060px; height: 80px;
+  color: #343431; font-family: "GapyeongHanseokbong-M"; font-size: 25px;
+}
+
+/* page */
+#page {
+  background-image: url(/images/hansik/page_bg.png);
+  display: flex; align-items: center; justify-content: center;
+}
+
+#page .main{
+  width: 1178px; height: 738px;
+  position: relative;
+  display: flex; align-items: center; flex-direction: column; justify-content: space-between;
+}
+#page .main p {
+  font-family: "GapyeongHanseokbong-M"; font-size: 21px; font-weight: 400; text-align: center;
+}
+
+/* ul.card */
+.card_all {
+  display: flex;
+  height: 517px;
+  margin-left: 28px;
+}
+.card_all ul.card {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-evenly;
+}
+.card_all ul.card >li {
+  width: 396px; height: 371px;
+  border-radius: 30px;
+  background: #EEE;
+  transition: .9s;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-around;
+}
+.card_all ul.card >li >h3 {
+  text-align: center; font-family: "GapyeongHanseokbong-M"; font-size: 26px; font-weight: 400;
+}
+.card_all ul.card >li >p {
+  color: #343431; text-align: center; font-family: "solmoeKimDaeGeon";
+  font-size: 17px; line-height: 24px; font-weight: 300;
+  display: none;
+}
+.card_all ul.card >li >a {
+  width: 181px; height: 45px;
+  background: rgba(190, 197, 214, 0.40);
+  border-radius: 10px;
+ align-items: center; justify-content: center;
+  color: #575757; text-align: center; font-family: "solmoeKimDaeGeon";
+  font-size: 15px;
+  display: none;
+  transition: .6s;
+}
+.card_all ul.card >li.on >a {
+  display: flex;
+}
+.card_all ul.card >li >a:hover {
+  background: rgba(68, 83, 119, 0.4);
+}
+.card_all ul.card >li >a >i {
+  font-size: 22px; margin-right: 10px;
+}
+.card_all ul.card >li.on {
+  height: 517px;
+  background: rgb(211, 220, 240);
+}
+.card_all ul.card >li.on >p {
+  display: block;
+}
+
+/* sura */
+#sura {
+  background-image: url(/images/hansik/sura_bg.png);
+}
+#sura .card_all {
+  width: 2456px;
+}
+
+/* new */
+#new {
+  background-image: url(/images/hansik/new_bg.png);
+}
+#new .card_all {
+  width: 2044px;
+}
+
+/* chu */
+#chu {
+  background-image: url(/images/hansik/chu_bg.png);
+}
+#chu .card_all {
+  width: 1632px;
+}
+
+/* medi */
+#medi {
+  background-image: url(/images/hansik/medi_bg.png);
+}
+#medi .card_all {
+  width: 2456px ; 
+}
+
+/* footer */
+footer{
+  height: 100vh;
+  position: relative;
+  background-color: var(--main-color-4);
+  background-image: url(../images/hansik/footer_bg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-blend-mode: overlay; 
+  color: #eee;
+}
+footer .f_deco{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+}
+footer .f_deco img{
+  width: 100%;
+  object-fit: cover;
+}
+footer .f_txt{
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .f_txt h4::before{
+  content: '';
+  width: 140px;
+  height: 2px;
+  background: #eee;
+  position: absolute;
+  left: 0;
+  top: -60px;
+}
+footer .f_txt h4{
+  font-family: "GapyeongHanseokbong-L";
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-bottom: 100px;
+  position: relative;
+  padding-top: 60px;
+}
+footer .f_txt .family{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+footer .f_txt .family a{
+  padding: 20px 40px;
+  border: 1px solid #eee;
+  margin-right: 20px;
+  transition: .6s;
+}
+footer .f_txt .family a:hover{
+  background: rgba(68, 83, 119, 0.4);
+}
+footer .f_txt .family a:last-child{
+  margin-right: 0;
+}
+
+/* bg_move */
+.sura_1 {
+  position: absolute; top: 0; left: 0;
+}
+.sura_2 {
+  position: absolute; bottom: 0; right: 0;
+}
+.new_1 {
+  position: absolute; top: 0; left: 0;
+  opacity: .6;
+}
+.new_2 {
+  position: absolute; bottom: 0; right: 0;
+}
+.chu_1 {
+  position: absolute; top: 0; left: 0;
+  opacity: .3;
+}
+.chu_2 {
+  position: absolute; bottom: 0; right: 0;
+  opacity: .6;
+}
+.chu_3 {
+  position: absolute; bottom: 0; right: 400px;
+  opacity: .4;
+}
+.medi_1 {
+  position: absolute; top: 0; left: 0;
+}
+.medi_2 {
+  position: absolute; bottom: 0; right: 0;
+  opacity: .4;
+}
