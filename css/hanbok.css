@@ -34,7 +34,7 @@ body {
 
 .main_visual .con strong {
   color: #333;
-  font-family: "Gapyeong Hanseokbong";
+  font-family: "GapyeongHanseokbong-M";
   font-size: 25px;
   font-weight: 300;
 }
@@ -81,7 +81,7 @@ section h2 {
   width: 879px;
   height: 130px;
   color: #FFF;
-  font-family: "Solmoe KimDaeGeon";
+  font-family: "solmoeKimDaeGeon";
   font-size: 55px;
   display: flex;
   align-items: center;
@@ -115,7 +115,7 @@ section.right .txt {
 }
 
 section .right .txt b {
-  font-family: "Solmoe KimDaeGeon";
+  font-family: "solmoeKimDaeGeon";
   font-size: 60px;
 }
 
@@ -124,7 +124,7 @@ section .right .txt img {
 }
 
 section .right .txt p {
-  font-family: "Gapyeong Hanseokbong";
+  font-family: "GapyeongHanseokbong-M";
   font-size: 25px;
   margin-top: 20px;
   font-weight: 300;
@@ -179,7 +179,7 @@ section .right .h_after_txt span{
   height: 155px;
   color: #FFF;
   text-align: center;
-  font-family: "Gapyeong Hanseokbong";
+  font-family: "GapyeongHanseokbong-M";
   font-size: 35px;
   display: flex;
   justify-content: center;
@@ -294,7 +294,7 @@ footer .f_txt h4::before{
   top: -60px;
 }
 footer .f_txt h4{
-  font-family: "GapyeongHanseokbong";
+  font-family: "GapyeongHanseokbong-M";
   font-size: 1.5rem;
   line-height: 2;
   margin-bottom: 100px;
