@@ -35,3 +35,43 @@
       }
     }
   })
+
+ /* 페이지 소개 펼쳐지기 */
+   function animateOnScroll() {
+    $('.go_page img').each(function() {
+      var elemTop = $(this).offset().top;
+      var elemBottom = elemTop + $(this).height();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      
+      if (elemBottom > viewportTop && elemTop < viewportBottom) {
+        $(this).css('animation', 'fadeIn 1.7s forwards');
+      }
+    });
+
+    $('#s4, #s6').each(function() {
+      var elemTop = $(this).offset().top;
+      var elemBottom = elemTop + $(this).height();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      
+      if (elemBottom > viewportTop && elemTop < viewportBottom) {
+        $(this).find('.go_right').css('animation', 'goRight 1.3s forwards');
+      }
+    });
+
+    $('#s5, #s7').each(function() {
+      var elemTop = $(this).offset().top;
+      var elemBottom = elemTop + $(this).height();
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+      
+      if (elemBottom > viewportTop && elemTop < viewportBottom) {
+        $(this).find('.go_left').css('animation', 'goLeft 1.3s forwards');
+      }
+    });
+  }
+
+  $(window).on('scroll', function() {
+    animateOnScroll();
+  });
