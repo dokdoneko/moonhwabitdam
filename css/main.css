@@ -231,7 +231,7 @@ section{
 .go_page img{
   height: 80%;
   object-fit: cover;
-  animation: fadeIn 1.7s 1.3s forwards;
+  /* animation: fadeIn 1.7s 1.3s forwards; */
   opacity: 0;
 }
 @keyframes fadeIn{
@@ -242,7 +242,7 @@ section{
   right: 0;
   background: url(../images/main/light_texture.png) no-repeat;
   box-shadow: 0 0 35px 15px #00000050;
-  animation: goRight 1.3s forwards;
+  /* animation: goRight 1.3s forwards; */
 }
 @keyframes goRight {
   0%{
@@ -258,7 +258,7 @@ section{
   left: 0;
   background: url(../images/main/dark_texture.png) no-repeat;
   box-shadow: 0 0 35px 15px #ffffff50;
-  animation: goLeft 1.3s forwards;
+  /* animation: goLeft 1.3s forwards; */
 }
 @keyframes goLeft {
   0%{
