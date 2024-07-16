@@ -1,18 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: 'kdg_Medium';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/kdg_Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GapyeongHanseokbong-Bold';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongHanseokbong-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
 
 .container {
   width: 1360px;
