@@ -7,6 +7,7 @@
 }
 
 body {
+  font-family: 'GapyeongHanseokbong-L', 'solmoeKimDaeGeon';
   background: url(../images/hanbok/bg.png);
 }
 
@@ -33,7 +34,7 @@ body {
 
 .main_visual .con strong {
   color: #333;
-  font-family: "GapyeongHanseokbong-M";
+  font-family: "GapyeongHanseokbong-L";
   font-size: 25px;
   font-weight: 300;
 }
@@ -123,7 +124,7 @@ section .right .txt img {
 }
 
 section .right .txt p {
-  font-family: "GapyeongHanseokbong-M";
+  font-family: "GapyeongHanseokbong-L";
   font-size: 25px;
   margin-top: 20px;
   font-weight: 300;
@@ -178,7 +179,7 @@ section .right .h_after_txt span{
   height: 155px;
   color: #FFF;
   text-align: center;
-  font-family: "GapyeongHanseokbong-M";
+  font-family: "GapyeongHanseokbong-L";
   font-size: 35px;
   display: flex;
   justify-content: center;
