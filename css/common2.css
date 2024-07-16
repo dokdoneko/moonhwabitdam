@@ -268,7 +268,7 @@ nav li a:hover:after {
 
 nav li:nth-of-type(1) {
   background-color: var(--main-color-0);
-  background-image: url(../images/nav_bg_main.png),
+  background-image: url(../images/nav_bg_main.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
