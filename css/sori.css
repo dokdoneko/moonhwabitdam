@@ -450,6 +450,9 @@ img {
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
   }
+    .right_contents {
+  display: none;
+}
 }
 
 @media (max-width: 767px) {
@@ -480,5 +483,8 @@ img {
   }
   .container {
   margin: 0 15px;
+}
+    .right_contents {
+  display: none;
 }
 }
