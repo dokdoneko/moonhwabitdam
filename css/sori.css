@@ -493,5 +493,5 @@ img {
   .inner_illust {
   width: 89px;
   height: 188px;
- 
-}
+  background-size: cover;
+ }
