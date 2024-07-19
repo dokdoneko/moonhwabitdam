@@ -105,7 +105,7 @@ section .txt >p {
 
 /* sura */
 #sura {
-  background-image: url(/images/hansik/sura_bg.png);
+  background-image: url(../images/hansik/sura_bg.png);
 }
 #sura .card_all {
   width: 2456px;
@@ -113,7 +113,7 @@ section .txt >p {
 
 /* new */
 #new {
-  background-image: url(/images/hansik/new_bg.png);
+  background-image: url(../images/hansik/new_bg.png);
 }
 #new .card_all {
   width: 2044px;
@@ -121,7 +121,7 @@ section .txt >p {
 
 /* chu */
 #chu {
-  background-image: url(/images/hansik/chu_bg.png);
+  background-image: url(../images/hansik/chu_bg.png);
 }
 #chu .card_all {
   width: 1632px;
@@ -129,7 +129,7 @@ section .txt >p {
 
 /* medi */
 #medi {
-  background-image: url(/images/hansik/medi_bg.png);
+  background-image: url(../images/hansik/medi_bg.png);
 }
 #medi .card_all {
   width: 2456px ; 
